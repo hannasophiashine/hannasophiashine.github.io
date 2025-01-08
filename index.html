@@ -18,6 +18,10 @@
             padding-bottom: 50px; 
         }
 
+p {
+    display: block !important; /* Force paragraphs to be block-level elements */
+    margin: 10px 0; /* Add space between paragraphs */
+}
         footer {
             background-color: #648FFF;
             color: white;
@@ -105,23 +109,25 @@ a:visited {
 </head>
 
 <body>
+ 
 
 <div class="bio" style="display: flex; align-items: center;">
     <img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/Github_IMG.png" alt="GitHub Profile Picture" style="width: 380px; height: auto; border: 7px solid #FFB000; border-radius: 20px;box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);margin-right: 15px;">
-    
-    <p>
-        Hello! My name is Hanna-Sophia Shine and I am the lab manager for the 
-        <a href="https://www.harvardlds.org/our-labs/snedeker-lab/" target="_blank">Snedeker Lab</a> 
-        (since June 2023). I graduated from the 
-        <a href="https://www.umd.edu" target="_blank">University of Maryland, College Park</a>, 
-        in May 2023 with a B.S. in 
-        <a href="https://psyc.umd.edu/" target="_blank">Psychology</a> 
-        and a minor in 
-        <a href="https://academiccatalog.umd.edu/undergraduate/colleges-schools/arts-humanities/classical-languages-literature/classical-mythology-minor/#requirementstext" target="_blank">Classical Mythology</a>.
+   
+<p>
+    Hello! My name is Hanna-Sophia Shine and I am the lab manager for the 
+    <a href="https://www.harvardlds.org/our-labs/snedeker-lab/" target="_blank">Snedeker Lab</a> 
+    (since June 2023). I graduated from the 
+    <a href="https://www.umd.edu" target="_blank">University of Maryland, College Park</a>, 
+    in May 2023 with a B.S. in 
+    <a href="https://psyc.umd.edu/" target="_blank">Psychology</a> 
+    and a minor in 
+    <a href="https://academiccatalog.umd.edu/undergraduate/colleges-schools/arts-humanities/classical-languages-literature/classical-mythology-minor/#requirementstext" target="_blank">Classical Mythology</a>.
 
-        I (like a lot of people!) am interested in how we link meaning to language. There seem to be a million and one ways to look at this question but I am specifically interested in exploring this (a) from a developmental perspective, (b) within the intersection between syntax & semantics, & (c) with a focus on events and event structure.
-        The world we experience is filled with events! We are constantly participating in or observing events in some form or another. I am interested in how young children extract information from these events and how this interacts with language. Another way of framing this would be, when do we need language to extract meaning from events and when do we rely on other cognitive mechanisms? What role do cognitive tools such as event concepts play in the mapping between meaning and language?
-    </p>
+    I (like a lot of people!) am interested in how we link meaning to language. There seem to be a million and one ways to look at this question but I am specifically interested in exploring this (a) from a developmental perspective, (b) within the intersection between syntax & semantics, & (c) with a focus on events and event structure.
+
+    The world we experience is filled with events! We are constantly participating in or observing events in some form or another. I am interested in how young children extract information from these events and how this interacts with language. Another way of framing this would be, when do we need language to extract meaning from events and when do we rely on other cognitive mechanisms? What role do cognitive tools such as event concepts play in the mapping between meaning and language?
+</p>
 </div>
 
 
@@ -147,6 +153,24 @@ a:visited {
         margin-top: 0;
     }
 </style>
+<style>
+    .contact h2 {
+        font-size: 2rem; 
+        font-family: 'Courier New', Courier, monospace; /* Funky font */
+        color: #FFB000; /* Bright, vibrant color */
+        text-shadow: 2px 2px #648FFF; /* Shadow effect */
+        transform: rotate(-5deg); /* Slight tilt */
+        background: linear-gradient(45deg, #DC267F, #FFB000); /* Gradient text effect */
+        -webkit-background-clip: text; /* Clip background to text */
+        -webkit-text-fill-color: transparent; /* Make background visible */
+        letter-spacing: 2px; /* Space between letters */
+        margin-bottom: 40px; /* Add space below the title */
+    }
+
+    .contact p {
+        margin-top: 10px; /* Add space between the heading and paragraph */
+    }
+</style>
 
 <div class="contact">
     <h2>Contact:</h2>
@@ -155,9 +179,50 @@ a:visited {
     </p>
 </div>
 
+<style>
+    .social-links h2 {
+        font-size: 1.8rem; /* Adjusted to be slightly smaller */
+        font-family: 'Arial Black', Gadget, sans-serif; /* Bold, modern font */
+        color: #785EF0; /* Solid color for text */
+        background: none; /* Removed gradient */
+        text-transform: uppercase; /* Make text all caps for emphasis */
+        text-align: left; /* Center-align the heading */
+        text-shadow: 3px 3px 6px #FE6100; /* Soft shadow matching one of your colors */
+        letter-spacing: 3px; /* Increase spacing between letters */
+        border-bottom: 3px solid #DC267F; /* Add a bold underline */
+        padding-bottom: 5px; /* Add space between text and underline */
+        margin-bottom: 15px; /* Space below the heading */
+    }
+
+    .social-links p {
+        margin-top: 10px; /* Space between heading and links */
+    }
+
+    .social-links a {
+        display: inline-block; /* Ensure links are styled properly */
+        margin-right: 10px; /* Space between links */
+        font-size: 1.2rem; /* Slightly larger link font */
+        color: #648FFF; /* Initial color of links */
+        font-weight: bold;
+        text-decoration: none; /* Remove underlines */
+        border: 2px solid transparent; /* Add subtle border */
+        padding: 5px 10px; /* Add padding to make the links look like buttons */
+        border-radius: 5px; /* Rounded corners */
+        transition: all 0.3s ease; /* Smooth hover effect */
+    }
+
+    .social-links a:hover {
+        text-decoration: underline; /* Add underline on hover */
+        color: #DC267F; /* Change color on hover */
+        border: 2px solid #FFB000; /* Highlight border on hover */
+        background-color: #FFB000; /* Add background on hover */
+        color: white; /* Change text to white on hover */
+    }
+</style>
+
 <div class="social-links">
-    <h2 style="font-size: 1.6rem; font-style: italic; margin-bottom: 5px;">Other Places you can Find me:</h2>
-    <p style="margin-top: 0;">
+    <h2>Other Places you can Find me:</h2>
+    <p>
         <a href="https://twitter.com/hannashine14" target="_blank">Twitter</a>
         <a href="https://github.com/hannasophiashine" target="_blank">GitHub</a>
         <a href="https://osf.io/mu6ef/" target="_blank">OSF</a>
@@ -169,6 +234,40 @@ a:visited {
     .social-links {
         text-align: left; 
         margin-right: 20px; 
+    }
+</style>
+
+<style>
+    .additional-links h2 {
+        font-size: 2rem; /* Larger, bold font size */
+        font-family: 'Courier New', Courier, monospace; /* Spiky, funky font */
+        color: #648FFF; /* Bright color for the text */
+        font-weight: bold;
+        letter-spacing: 3px; /* Increase spacing between letters */
+        margin-bottom: 10px;
+        text-transform: uppercase; /* Makes the text look more bold and edgy */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adds some shadow for a spiky look */
+    }
+
+    .additional-links a {
+        font-size: 1.2rem; /* Slightly larger font for the links */
+        color: #FFB000; /* Link color */
+        font-weight: bold;
+        text-decoration: none; /* Remove underline */
+        padding: 5px;
+        transition: all 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+    .additional-links a:hover {
+        color: #DC267F; /* Hover effect color */
+        text-decoration: underline; /* Underline the links on hover */
+    }
+
+    .additional-links p {
+        margin-top: 0;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
     }
 </style>
         
