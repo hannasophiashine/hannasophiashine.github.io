@@ -15,10 +15,21 @@
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
+            padding-bottom: 50px; 
+        }
+
+        footer {
+            background-color: #648FFF;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            margin-top: 20px;
         }
 
         header {
-            background-color: #4CAF50;
+            background-color: #648FFF; 
             color: white;
             text-align: center;
             padding: 20px;
@@ -33,6 +44,16 @@
             line-height: 1.6;
         }
 
+a:link {
+    color: #648FFF;
+    text-decoration: none; 
+}
+
+
+a:visited {
+    color: #785EF0;
+}
+
         .content {
             margin: 40px;
             text-align: center;
@@ -43,64 +64,67 @@
             margin-bottom: 20px;
         }
 
-.social-links a {
-    text-decoration: none;
-    color: #1E90FF;
-    font-size: 1.5rem;
-    margin: 0 15px;
-    transition: color 0.3s, transform 0.3s, font-size 0.3s;
-}
+        .social-links a {
+            text-decoration: none;
+            color: #785EF0; /* Replaced with #785EF0 */
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: color 0.3s, transform 0.3s, font-size 0.3s;
+        }
 
-.social-links a:hover {
-    color: #ff6347;  /* Change color to a fun, bold color */
-    transform: scale(1.2);  /* Make the link grow on hover */
-    font-size: 1.7rem;  /* Increase font size for emphasis */
-}
+        .social-links a:hover {
+            color: #DC267F; 
+            transform: scale(1.2);  
+            font-size: 1.7rem; 
+        }
 
-/* Optional: Adding a little bounce effect for a more playful feel */
-.social-links a:active {
-    transform: scale(1.1); /* Slight bounce effect when clicked */
-    transition: transform 0.1s;
-}
+        .social-links a:active {
+            transform: scale(1.1); 
+            transition: transform 0.1s;
+        }
+
         .additional-links a {
             text-decoration: none;
-            color: #1E90FF;
+            color: #FE6100; 
             font-size: 1.25rem;
             margin: 0 10px;
         }
 
         .additional-links a:hover {
-            color: #333;
+            color: #FFB000; 
+        }
+        .color-palette-note {
+            font-style: italic;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1rem;
         }
 
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
+
     </style>
 </head>
-<div class="bio">
-    <h2>Bio:</h2>
-    <img src="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/Github_Profile_Picture.jpg" width="200" height="600">
+
+<body>
+
+<div class="bio" style="display: flex; align-items: center;">
+    <img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/IMG_8210_Original.jpg" alt="GitHub Profile Picture" style="width: 180px; height: auto; border: 7px solid #FFB000; border-radius: 20px;box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);margin-right: 15px;">
+    
     <p>
-    Hello! My name is Hanna-Sophia Shine and I am the lab manager for the 
-    <a href="https://www.harvardlds.org/our-labs/snedeker-lab/" target="_blank">Snedeker Lab</a> 
-    (since June 2023). I graduated from the 
-    <a href="https://www.umd.edu" target="_blank">University of Maryland, College Park</a>, 
-    in May 2023 with a B.S. in 
-    <a href="https://psyc.umd.edu/" target="_blank">Psychology</a> 
-    and a minor in 
-    <a href="https://academiccatalog.umd.edu/undergraduate/colleges-schools/arts-humanities/classical-languages-literature/classical-mythology-minor/#requirementstext" target="_blank">Classical Mythology</a>.
-</p>
-                I (like a lot of people!) am interested in how we link meaning to language. There seem to be a million and one ways to look at this question but I am specifically interested in exploring this (a) from a developmental perspective, (b) within the intersection between syntax & semantics, & (c) with a focus on events and event structure.
-                The world we experience is filled with events! We are constantly participating in or observing events in some form or another. I am interested in how young children extract information from these events and how this interacts with language.
-            </p>
-        </div>
+        Hello! My name is Hanna-Sophia Shine and I am the lab manager for the 
+        <a href="https://www.harvardlds.org/our-labs/snedeker-lab/" target="_blank">Snedeker Lab</a> 
+        (since June 2023). I graduated from the 
+        <a href="https://www.umd.edu" target="_blank">University of Maryland, College Park</a>, 
+        in May 2023 with a B.S. in 
+        <a href="https://psyc.umd.edu/" target="_blank">Psychology</a> 
+        and a minor in 
+        <a href="https://academiccatalog.umd.edu/undergraduate/colleges-schools/arts-humanities/classical-languages-literature/classical-mythology-minor/#requirementstext" target="_blank">Classical Mythology</a>.
+
+        I (like a lot of people!) am interested in how we link meaning to language. There seem to be a million and one ways to look at this question but I am specifically interested in exploring this (a) from a developmental perspective, (b) within the intersection between syntax & semantics, & (c) with a focus on events and event structure.
+        The world we experience is filled with events! We are constantly participating in or observing events in some form or another. I am interested in how young children extract information from these events and how this interacts with language. Another way of framing this would be, when do we need language to extract meaning from events and when do we rely on other cognitive mechanisms? What role do cognitive tools such as event concepts play in the mapping between meaning and language?
+    </p>
+</div>
+
+
         
   <style>
     .bio {
@@ -109,56 +133,65 @@
     }
 </style>
 
-        <div class="contact">
-            <h2>Contact:</h2>
-            <p>Feel free to contact me:</p>
-            <p>
-                <a href="mailto:hshine@fas.harvard.edu">hshine[at]fas[dot]harvard[dot]edu</a>
-            </p>
-        </div>
-                  <style>
+<div class="contact">
+    <h2 style="font-size: 1.6rem; font-style: italic; margin-bottom: 5px;">Contact:</h2>
+    <p style="margin-top: 0;">Feel free to contact me:
+        <a href="mailto:hshine@fas.harvard.edu">hshine[at]fas[dot]harvard[dot]edu</a>
+    </p>
+</div>
+
+        <style>
     .contact {
         text-align: left; 
         margin-right: 20px; 
     }
 </style>
 
-        <div class="social-links">
-            <h2>Other Places You Can Find Me:</h2>
-            <p>
-                <a href="https://twitter.com/hannasophiashine" target="_blank">Twitter</a>
-                <a href="https://github.com/hannasophiashine" target="_blank">GitHub</a>
-                <a href="https://osf.io/mu6ef/" target="_blank">OSF</a>
-            </p>
-        </div>
-                          <style>
+<div class="social-links">
+    <h2 style="font-size: 1.6rem; font-style: italic; margin-bottom: 5px;">Other Places you can Find me:</h2>
+    <p style="margin-top: 0;">
+        <a href="https://twitter.com/hannasophiashine" target="_blank">Twitter</a>
+        <a href="https://github.com/hannasophiashine" target="_blank">GitHub</a>
+        <a href="https://osf.io/mu6ef/" target="_blank">OSF</a>
+    </p>
+</div>
+
+        
+        <style>
     .social-links {
         text-align: left; 
         margin-right: 20px; 
     }
 </style>
         
+<div class="additional-links">
+    <h2 style="font-size: 1.6rem; font-style: italic; margin-bottom: 5px;">More From Me:</h2>
+    <p style="margin-top: 0;">
+        <a href="CV.html" target="_blank">My CV</a>
+        <a href="Posters.html" target="_blank">Posters Presentations</a>
+        <a href="Projects.html" target="_blank">Other Projects</a>
+    </p>
+</div>
 
-        <div class="additional-links">
-            <h2>More About My Academic Work:</h2>
-            <p>
-                <a href="CV.html" target="_blank">My CV</a>
-                <a href="Posters.html" target="_blank">Posters Presentations</a>
-                <a href="Projects.html" target="_blank">Other Projects</a>
-            </p>
-        </div>
-                              <style>
+
+        <style>
     .additional-links {
         text-align: left; 
         margin-right: 20px; 
     }
 </style>
-    </div>
-    </div>
-        </div>
+       </div>
+
+    <!-- Color Palette Source Note -->
+    <p class="color-palette-note">
+        <a href="https://davidmathlogic.com/colorblind/#%23648FFF-%23785EF0-%23DC267F-%23FE6100-%23FFB000" target="_blank">
+            Color palette comes from coloring for colorblindness
+        </a>
+    </p>
+
     <footer>
         <p>&copy; 2025 Hanna-Sophia Shine | Powered by GitHub </p>
     </footer>
-</body>
 
+</body>
 </html>
