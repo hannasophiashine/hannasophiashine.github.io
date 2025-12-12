@@ -142,6 +142,54 @@
 
 
     </style>
+<style>
+.qa-dropdown {
+  margin: 20px 0;
+}
+
+.qa-question {
+  background-color: #f2f2f2;
+  color: #DC267F; /* or #DC267F — tell me which you prefer! */
+  width: 100%;
+  text-align: left;
+  padding: 12px 16px;
+  border: none;
+  font-size: 1.2rem;
+  font-family: 'Times New Roman', Times, serif;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+
+.qa-question:hover {
+  background-color: #e6e6e6;
+}
+
+.qa-answer {
+  display: none;
+  padding: 12px 16px;
+  background-color: #ffffff;
+  border-left: 4px solid #FE6100;
+  margin-top: 5px;
+  border-radius: 4px;
+}
+
+.qa-dropdown.open .qa-answer {
+  display: block;
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll(".qa-question").forEach(btn => {
+    btn.addEventListener("click", function() {
+      const container = this.parentElement;
+      container.classList.toggle("open");
+    });
+  });
+});
+</script>
+
 </head>
 
 <body>
@@ -158,7 +206,7 @@
     <p>
       <br>
 
-        Hello! My name is Hanna and I am the lab manager for the <a href="https://www.harvardlds.org/our-labs/snedeker-lab/" target="_blank">Snedeker Lab</a> (since June 2023). I graduated from the 
+        Hello! My name is Hanna and I am the lab manager for the <a href="https://www.harvardlds.org/our-labs/snedeker-lab/" target="_blank">Snedeker Lab</a> (since June 2023) and a lab manager for the <a href="https://ai4commsci.github.io/index.html" target="_blank">Ai4CommSci Lab</a> (since September 2025). I graduated from the 
         <a href="https://www.umd.edu" target="_blank">University of Maryland, College Park</a> in May 2023 with a B.S. in 
         <a href="https://psyc.umd.edu/" target="_blank">Psychology</a> and a minor in 
         <a href="https://academiccatalog.umd.edu/undergraduate/colleges-schools/arts-humanities/classical-languages-literature/classical-mythology-minor/#requirementstext" target="_blank">Classical Mythology</a>. 
@@ -184,7 +232,7 @@ what conceptual representations are innate or early emerging, and how do they gu
 <strong style="color: #DC267F;">(b)</strong> Within the <strong>intersection of semantics and pragmatics</strong>, as children encounter external input embedded in rich pragmatic contexts, how do they integrate conceptual primitives or precursors with these pragmatic cues to map meaning onto form? What can this reveal about the developmental trajectory of children's ability to infer meanings that extend beyond literal content?
 
     <p>        
-<strong style="color: #DC267F;">(c)</strong> With a focus on <strong> informing theory</strong>, how can developmental data inform and constrain formal semantic and pragmatic theory? How can a deeper understanding of early-emerging or innate conceptual primitives inform formal linguistic theory? Similarly, how can developmental data deepen our understanding of the mechanisms that allow us to derive meanings beyond the literal content of an utterance?
+<strong style="color: #DC267F;">(c)</strong> With a focus on <strong> informing theory</strong>, how can developmental data inform and constrain formal semantic and pragmatic theory? How can a deeper understanding of early-emerging or innate conceptual primitives inform formal linguistic theory? Similarly, how can developmental data deepen our understanding of the mechanisms that allow us to derive meanings that extend beyond the literal content of a sentence?
     <p> 
 
 <hr style="border: none; height: 5px; background-image: repeating-linear-gradient(90deg, #DC267F, #DC267F 5px, transparent 5px, transparent 10px);">
@@ -193,23 +241,102 @@ what conceptual representations are innate or early emerging, and how do they gu
 <p>
     <strong style="color: #648FFF;">Currently, I am working on a number of projects through the Snedeker Lab. You can learn more about them below!</strong>
 <p>
-    <strong style="color: #FE6100;">(1)</strong> <strong>Do the thematic roles of agent and patient serve as a readily available dimension for categorizing event participants in the absence of explicit language?</strong> Working with Dr. Irene Canudas Grabolosa and Dr. Jesse Snedeker we are investigating whether individuals can access this relational concept and use it to explicitly catageorize event participants engaged in contact and cause-motion events. <i>Spoilers:</i> they do!
-    <p>     
-    Through an online computer-based task on the PCIbex platform (Zehr & Schwarz, 2018), participants viewed short videos depicting contact actions (such as hitting or hugging). We modeled their responses, guiding them to select either the agent or the patient. Following the modeling phase, participants applied the learned selection rule to new contact and motion verbs in a test phase, assessing generalization. This work was done with English-speaking adults, English-speaking children, and homesigners based in Nicaragua. I collected data from all three populations and I've presented two posters on this work (<a href="https://hsp2025.github.io/" target="_blank">Human Sentence Processing</a> conference in March 2025 and Boston University Conference on Child Language Development in November 2025) The abstract for HSP can be found <a href="https://hsp2025.github.io/abstracts/182.pdf" target="_blank">here</a>.
+
+</p>
+
+<!-- PROJECT 1 -->
+<div class="qa-dropdown">
+  <button class="qa-question">
+    <strong style="color: #FE6100;">(1)</strong>
+    <strong>Do the thematic roles of agent (the doer) and patient (the affected entity) serve as a readily available dimension for categorizing event participants in the absence of explicit language?</strong>
+  </button>
+
+  <div class="qa-answer">
     <p>
-    What did we find? We found that English-speaking adults and children can deploy Agent-Patient concepts for explicit categorization, suggesting that these concepts are readily accessible by the age of four. Importantly, Homesigners are also able to do this, suggesting the Agent-Patient relational concept is not something we extract from language but rather is brought to the language acquisition process by the learner. 
+      Working with Dr. Irene Canudas Grabolosa and Dr. Jesse Snedeker we are investigating whether individuals can access the Agent-Patient relational concept and use it to explicitly categorize event participants engaged in contact and cause-motion events. <i>Spoiler:</i> they do!
+    </p>
+
     <p>
-    We are also interested in exploring how event roles interact with linguistic structure and have two follow-up studies we have run with adults! More coming soon!
-     <p>
-<strong style="color: #FE6100;">(2)</strong> <strong>Do the traits that we see in autistic individuals (children and adults) reflect a global prediction impairment?</strong> Working with Dr. Tanya Levari, Briony Waite (doctoral student), and Dr. Jesse Snedeker we are assessing predictive abilities across a wide range of perceptual, cognitive, and linguistic domains in a single group of children with autism. By working with one well-characterized sample, want aim to see whether there are shared underlying mechanisms at work across these domains, or, if observed, predictive impairments are domain-specific, affecting some areas but not others.
-     <p>
-       This study includes both behavioral (standardized tests including the CELF and part of the Kbit) and brain measures (EEG) and a parallel study is being conducted with adults to allow for an exploration of the developmental trajectory of predictive abilities in this population. Within the context of this project I am providing mentorship to Cathyln Boyle, a full-time undergraduate research assistant on placement from the university of Bath, as she explores how autism and language ability interact and function as predictors of performance on an online sentence completetion task in which we modify the contextual support present across sentence trials. 
-     <p>
-<strong style="color: #FE6100;">(3)</strong> <strong>Is the  counting pattern observed in tonal morpho-phonology (but not in segmental morpho-phonology) due to a synchronic learnability gap or a diachronic accidental gap?</strong> Working with Jian Cui (doctoral student in Linguistics) and and Dr. Jesse Snedeker we are exploring this typological asymmetry and how feature (tone vs. segment) and counting (counting vs. non-counting) interact to influence performance on a task that involves learning a morphological (i.e., pluralization) rule in an artificial language. 
-    <p>     
-    Through an online computer-based task on the PcIbex platform (Zehr & Schwarz, 2018), participants are trained to learn a pluralization rule that involves some combination of feature assignment and counting (e.g., tonal assignment and counting or segmental assignment and non-counting) in an artificial language. We  then assess performance on selecting the correct pluralization of novel words in the artificial language and see if it differs signficantly based on some combination of feature and counting. This work is being down with Cantonese-English bilignuals (more familar with tonal language systems) as well as monolingual English speakers (little to no familiarity with tonal language systems). We found that adults struggle to learn an unattested segmental counting rule relative to its tonal counterpart. We will run this study with children in the spring to better understand whether this asymmetry is rooted in early emerging learning mechanisms or driven by linguistic experience.
+    Through an online computer-based task on the PCIbex platform (Zehr & Schwarz, 2018), participants viewed short videos depicting contact actions (such as hitting or hugging). We modeled their responses, guiding them to select either the agent or the patient. Following the modeling phase, participants applied the learned selection rule to new contact and motion verbs in a test phase, assessing generalization. This work was done with English-speaking adults, English-speaking children, and homesigners based in Nicaragua. I collected data from all three populations and I've presented two posters on this work (<a href="https://hsp2025.github.io/" target="_blank">Human Sentence Processing</a> conference in March 2025 and <a href="https://www.bu.edu/bucld/" target="_blank">Boston University Conference on Child Language Development</a> in November 2025) The abstract for HSP can be found <a href="https://hsp2025.github.io/abstracts/182.pdf" target="_blank">here</a> and the posters I presented can be found <a href="https://hannasophiashine.github.io/posters.html" target="_blank">here</a>!.
+    </p>
+
+    <p>
+<strong>What did we find?</strong> We found that English-speaking adults and children can deploy Agent-Patient concepts for explicit categorization, suggesting that these concepts are readily accessible by the age of four. Importantly, Homesigners are also able to do this, suggesting the Agent-Patient relational concept is not something we extract from language but rather is brought to the language acquisition process by the learner.
+    </p>
+
+    <p>
+We are also interested in exploring how event roles interact with linguistic structure and have two follow-up studies we have run with adults! More coming soon!
+    </p>
+  </div>
+</div>
 
 
+<!-- PROJECT 2 -->
+<div class="qa-dropdown">
+  <button class="qa-question">
+    <strong style="color: #FE6100;">(2)</strong>
+    <strong>Do the traits that we see in autistic individuals reflect a global prediction impairment?</strong>
+  </button>
+
+  <div class="qa-answer">
+    <p>
+</strong> Working with Dr. Tanya Levari, Briony Waite (doctoral student), and Dr. Jesse Snedeker we are assessing predictive abilities across a wide range of perceptual, cognitive, and linguistic domains in a single group of children with autism. By working with one well-characterized sample, want aim to see whether there are shared underlying mechanisms at work across these domains, or, if observed, predictive impairments are domain-specific, affecting some areas but not others.    </p>
+
+    <p>
+This study includes both behavioral (standardized tests including the CELF and part of the Kbit) and brain measures (EEG) and a parallel study is being conducted with adults to allow for an exploration of the developmental trajectory of predictive abilities in this population. In addition to recruiting and running 19 ASD participants in both the EEG portion of the study (~ 2 hour appointments) and the behavioral portion of the study (~1.5 hour appointments) I have supervised two multi-week projects.
+</p>
+
+    <p>
+I supervised Isabel Sichlau (now a <a href="https://elc-lab-ucsd.com/people" target="_blank">lab manager</a>! ) during a 9-week summer internship program. Isabel expressed an interest in the visual adaption component of this study and she presented <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/Sichlau_PPA.pdf" target="_blank">this poster</a> at our summer internship fair in 2024! Currently, I am providing mentorship to Cathyln Boyle, a former undergraduate research assistant on placement from the university of Bath, as she explores how autism and language ability interact and function as predictors of performance in an online sentence completion task in which we modify the contextual support present across sentence trials. We recently submitted an abstract to a conference and Cathlyn is now writing her undergraduate thesis on this work!    </p>
+  </div>
+</div>
+
+
+<!-- PROJECT 3 -->
+<div class="qa-dropdown">
+  <button class="qa-question">
+    <strong style="color: #FE6100;">(3)</strong>
+    <strong>Is the counting pattern observed in tonal morpho-phonology due to a synchronic learnability gap or a diachronic accidental gap?</strong>
+  </button>
+
+  <div class="qa-answer">
+    <p>
+Working with Jian Cui (doctoral student in Linguistics at Harvard) and Dr. Jesse Snedeker we are exploring this typological asymmetry and how feature (tone vs. segment) and counting (counting vs. non-counting) interact to influence performance on a task that involves learning a morphological (i.e., pluralization) rule in an artificial language.
+    </p>
+
+    <p>
+Through an online computer-based task on the PcIbex platform (Zehr & Schwarz, 2018), participants are trained to learn a pluralization rule that involves some combination of feature assignment and counting (e.g., tonal assignment and counting or segmental assignment and non-counting) in an artificial language. We then assess performance on selecting the correct pluralization of novel words in the artificial language and see if it differs signficantly based on some combination of feature and counting. This study was conducted with Cantonese-English bilignuals (more familar with tonal language systems) as well as monolingual English speakers (little to no familiarity with tonal language systems). We found that adults struggle to learn an unattested segmental counting rule relative to its tonal counterpart. We will run this study with children in the spring to better understand whether this asymmetry is rooted in early emerging learning mechanisms or if it is driven by linguistic experience.
+</p>
+
+    <p>
+    </p>
+  </div>
+</div>
+
+
+<!-- PROJECT 4 -->
+<div class="qa-dropdown">
+  <button class="qa-question">
+    <strong style="color: #FE6100;">(4)</strong>
+    <strong>Can preschoolers use event dynamics to infer temporal order in language?</strong>
+  </button>
+
+  <div class="qa-answer">
+    <p>
+Working with Elena Marx (doctoral student at CEU), Dr. Eva Wittenberg, and Dr. Jesse Snedeker we are exploring whether children (4;0 - 4;11) make use of the dynamic properties of situations to infer temporal order in otherwise ambiguous sentences that use a relative clause construction.    </p>
+
+    <p>
+Using an act-out task, we presented children with stative main clause sentences (e.g., "Tiger sat on the wagon that Sheep danced next to") and eventive main clause sentences (e.g., "Tiger danced next to the wagon that Sheep sat on"). Prior work found that, in an underspecified situation like this, adults tend to treat static states like sitting as the backdrop (i.e. the Ground) against which dynamic events like dancing (i.e., the Figure) unfold. Do children do the same thing?    </p>
+
+    <p>
+While data collection is ongoing (one or two kids left!) preliminary results suggest that kids do the same thing! Specifically, in their enactments, children were more likely to follow the linear order of a sentence when the main clause encoded a state and tended to reverse the order when the relative clause encoded a state. This suggests that children, like adults, use event dynamicity as a cue to infer temporal order.    </p>
+  </div>
+</div>
+
+<p>
+    <strong style="color: #648FFF;">Through the Ai4CommSci Lab I am working on developing a transitive elicitation task that will be used to better understand word order in the Formosan Languages! This is very much in development and is collaborative work with Dr. Joshua Hartshorne and Dr. Jesse Snedeker.</strong>
+<p>
+  
 </div>
  
  <hr style="border: none; height: 5px; background-image: repeating-linear-gradient(90deg, #DC267F, #DC267F 5px, transparent 5px, transparent 10px);">
