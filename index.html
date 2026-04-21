@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +7,7 @@
     <meta name="author" content="Hanna-Sophia Shine">
     <title>Hanna-Sophia Shine | Lab Manager</title>
     <link rel="stylesheet" href="styles.css">
+
     <style>
         body {
             font-family: 'Times New Roman', Times, serif;
@@ -32,13 +32,11 @@
             margin: 1px 0;
         }
 
-.bio {
-    display: block; 
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left; 
-    margin-right: 20px; 
-}
+        .bio {
+            display: block;
+            text-align: left;
+            margin-right: 20px;
+        }
 
         .bio img {
             width: 380px;
@@ -49,7 +47,8 @@
             margin-right: 15px;
         }
 
-        .bio p {
+        .bio p,
+        p {
             font-size: 1.25rem;
             line-height: 1.6;
             margin: 1rem 0;
@@ -79,12 +78,16 @@
             margin-top: 20px;
         }
 
-        .contact, .social-links, .additional-links {
+        .contact,
+        .social-links,
+        .additional-links {
             text-align: left;
             margin-right: 20px;
         }
 
-        .contact h2, .social-links h2, .additional-links h2 {
+        .contact h2,
+        .social-links h2,
+        .additional-links h2 {
             font-size: 2rem;
             font-family: 'Courier New', Courier, monospace;
             letter-spacing: 3px;
@@ -103,150 +106,161 @@
             -webkit-text-fill-color: transparent;
         }
 
-   <style>
-    .social-links, .additional-links {
-        text-align: left;
-        margin-right: 20px;
-    }
+        .social-links,
+        .additional-links {
+            text-align: left;
+            margin-right: 20px;
+        }
 
-    .social-links h2, .additional-links h2 {
-        font-size: 2rem;
-        font-family: 'Courier New', Courier, monospace;
-        letter-spacing: 3px;
-        margin-bottom: 10px;
-        color: #FFB000;
-        text-shadow: 2px 2px #FFB000;
-        transform: rotate(-0deg);
-        background: linear-gradient(45deg, #DC267F, #648FFF);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-top: 0px;
-        padding-bottom: 5px;
-    }
+        .social-links h2,
+        .additional-links h2 {
+            font-size: 2rem;
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            color: #FFB000;
+            text-shadow: 2px 2px #FFB000;
+            transform: rotate(0deg);
+            background: linear-gradient(45deg, #DC267F, #648FFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-top: 0px;
+            padding-bottom: 5px;
+        }
 
-    .social-links a, .additional-links a {
-        font-size: 1.25rem;
-        color: #648FFF;
-        font-weight: bold;
-        text-decoration: none;
-        padding: 0px;
-        margin-right: 10px;
-        transition: all 0.3s ease;
-    }
+        .social-links a,
+        .additional-links a {
+            font-size: 1.25rem;
+            color: #648FFF;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 0px;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
 
-    .social-links a:hover, .additional-links a:hover {
-        color: #DC267F;
-        text-decoration: underline;
-    }
-</style>
+        .social-links a:hover,
+        .additional-links a:hover {
+            color: #DC267F;
+            text-decoration: underline;
+        }
 
+        .qa-dropdown {
+            margin: 20px 0;
+        }
 
+        .qa-question {
+            background-color: #f2f2f2;
+            color: #DC267F;
+            width: 100%;
+            text-align: left;
+            padding: 12px 16px;
+            border: none;
+            font-size: 1.2rem;
+            font-family: 'Times New Roman', Times, serif;
+            cursor: pointer;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+
+        .qa-question:hover {
+            background-color: #e6e6e6;
+        }
+
+        .qa-answer {
+            display: none;
+            padding: 12px 16px;
+            background-color: #ffffff;
+            border-left: 4px solid #FE6100;
+            margin-top: 5px;
+            border-radius: 4px;
+        }
+
+        .qa-dropdown.open .qa-answer {
+            display: block;
+        }
     </style>
-<style>
-.qa-dropdown {
-  margin: 20px 0;
-}
 
-.qa-question {
-  background-color: #f2f2f2;
-  color: #DC267F; /* or #DC267F — tell me which you prefer! */
-  width: 100%;
-  text-align: left;
-  padding: 12px 16px;
-  border: none;
-  font-size: 1.2rem;
-  font-family: 'Times New Roman', Times, serif;
-  cursor: pointer;
-  border-radius: 6px;
-  margin-top: 10px;
-}
-
-
-.qa-question:hover {
-  background-color: #e6e6e6;
-}
-
-.qa-answer {
-  display: none;
-  padding: 12px 16px;
-  background-color: #ffffff;
-  border-left: 4px solid #FE6100;
-  margin-top: 5px;
-  border-radius: 4px;
-}
-
-.qa-dropdown.open .qa-answer {
-  display: block;
-}
-</style>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  document.querySelectorAll(".qa-question").forEach(btn => {
-    btn.addEventListener("click", function() {
-      const container = this.parentElement;
-      container.classList.toggle("open");
-    });
-  });
-});
-</script>
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".qa-question").forEach(btn => {
+                btn.addEventListener("click", function() {
+                    const container = this.parentElement;
+                    container.classList.toggle("open");
+                });
+            });
+        });
+    </script>
 </head>
 
 <body>
-<header style="background-color: transparent; margin-bottom: 0;">
-    <h1 style="font-size: 2.5rem; font-style: italic; color: #DC267F; text-align: left; margin: 1px ;">
-        Hanna-Sophia Shine
-    </h1>
-</header>
+    <header style="background-color: transparent; margin-bottom: 0;">
+        <h1 style="font-size: 2.5rem; font-style: italic; color: #DC267F; text-align: left; margin: 1px;">
+            Hanna-Sophia Shine
+        </h1>
+    </header>
 
-<div class="bio" style="overflow: hidden;">
-    <img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/Github_IMG.png" 
-        alt="GitHub Profile Picture" 
-        style="float: left; width: 380px; height: auto; border: 7px solid #FFB000; border-radius: 20px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); margin-right: 15px; margin-bottom: 15px;">
-<p>
-  Life Update: I will be starting my PhD in Cognitive Science with 
-  <a href="https://vivo.brown.edu/display/rfeiman" target="_blank" rel="noopener noreferrer">
-    Dr. Roman Feiman
-  </a> at Brown in Fall 2026!
-<br>
-<br>
-        Hello! My name is Hanna and I am the lab manager for the <a href="https://www.harvardlds.org/our-labs/snedeker-lab/" target="_blank">Snedeker Lab</a> (since June 2023) and a lab manager for the <a href="https://ai4commsci.github.io/index.html" target="_blank">Ai4CommSci Lab</a> (since September 2025). I graduated from the 
-        <a href="https://www.umd.edu" target="_blank">University of Maryland, College Park</a> in May 2023 with a B.S. in 
-        <a href="https://psyc.umd.edu/" target="_blank">Psychology</a> and a minor in 
-        <a href="https://academiccatalog.umd.edu/undergraduate/colleges-schools/arts-humanities/classical-languages-literature/classical-mythology-minor/#requirementstext" target="_blank">Classical Mythology</a>. 
-        As an undergrad at UMD, I was a research assistant in the 
-        <a href="https://sites.google.com/umd.edu/ecilab/home?authuser=0" target="_blank">Early Childhood Interaction Lab</a>, 
-        the <a href="https://irlumd.weebly.com/" target="_blank">Interpersonal Relationships Lab</a>, and the 
-        <a href="https://lmcl-umd.github.io/" target="_blank">Language and Music Cognition Lab</a>. I wrote my undergraduate thesis under the mentorship of 
-        <a href="https://lmcl-umd.github.io/authors/bob/" target="_blank">Dr. Bob Slevc</a> on the influence of perceived accent prestige on lexical and syntactic alignment in “dialogue” 
-        (<a href="https://osf.io/sp9ag" target="_blank">OSF</a>, <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/Thesis_URD_23.pptx.pdf" target="_blank">poster 1</a> & <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/Alignment_HSP_Poster.png" target="_blank">poster 2</a>).
-    </p>
-<br>
-<hr style="border: none; height: 5px; background-image: repeating-linear-gradient(90deg, #DC267F, #DC267F 5px, transparent 5px, transparent 10px);">
+    <div class="bio" style="overflow: hidden;">
+        <img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/Github_IMG.png"
+             alt="GitHub Profile Picture"
+             style="float: left; width: 380px; height: auto; border: 7px solid #FFB000; border-radius: 20px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); margin-right: 15px; margin-bottom: 15px;">
+
+        <p>
+            <strong>Life Update:</strong> I will be starting my PhD in Cognitive Science with
+            <a href="https://vivo.brown.edu/display/rfeiman" target="_blank" rel="noopener noreferrer">
+                Dr. Roman Feiman
+            </a> at Brown in Fall 2026!
+            <br><br>
+
+            Hello! My name is Hanna and I am the lab manager for the
+            <a href="https://www.harvardlds.org/our-labs/snedeker-lab/" target="_blank">Snedeker Lab</a> (since June 2023) and a lab manager for the
+            <a href="https://ai4commsci.github.io/index.html" target="_blank">Ai4CommSci Lab</a> (since September 2025). I graduated from the
+            <a href="https://www.umd.edu" target="_blank">University of Maryland, College Park</a> in May 2023 with a B.S. in
+            <a href="https://psyc.umd.edu/" target="_blank">Psychology</a> and a minor in
+            <a href="https://academiccatalog.umd.edu/undergraduate/colleges-schools/arts-humanities/classical-languages-literature/classical-mythology-minor/#requirementstext" target="_blank">Classical Mythology</a>.
+            As an undergrad at UMD, I was a research assistant in the
+            <a href="https://sites.google.com/umd.edu/ecilab/home?authuser=0" target="_blank">Early Childhood Interaction Lab</a>,
+            the <a href="https://irlumd.weebly.com/" target="_blank">Interpersonal Relationships Lab</a>, and the
+            <a href="https://lmcl-umd.github.io/" target="_blank">Language and Music Cognition Lab</a>. I wrote my undergraduate thesis under the mentorship of
+            <a href="https://lmcl-umd.github.io/authors/bob/" target="_blank">Dr. Bob Slevc</a> on the influence of perceived accent prestige on lexical and syntactic alignment in “dialogue”
+            (<a href="https://osf.io/sp9ag" target="_blank">OSF</a>,
+            <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/Thesis_URD_23.pptx.pdf" target="_blank">poster 1</a> &
+            <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/Alignment_HSP_Poster.png" target="_blank">poster 2</a>).
+        </p>
+
+        <p>
+            <strong>Advice & Mentorship:</strong> If you are an undergraduate or post-baccalaureate RA who is interested in learning more about the lab manager application process (or what the job entails), or the graduate school application process, please don't hesitate to reach out! I would be more than happy to talk about my experience and/or provide feedback on materials if I can :)
+        </p>
+
+        <hr style="border: none; height: 5px; background-image: repeating-linear-gradient(90deg, #DC267F, #DC267F 5px, transparent 5px, transparent 10px);">
+    </div>
 
     <p>
-        I am broadly interested in language and cognition and, more specifically, I would like to explore how children tackle the learning problem of mapping meaning onto linguistic form. I am interested in exploring this process in the following ways: 
-<br>
-<br>
-    <p>        
-<strong style="color: #DC267F;">(a)</strong> From a <strong>developmental perspective</strong>, 
-what conceptual representations are innate or early emerging, and how do they guide children as they tackle the learning problem of mapping meaning onto linguistic form? How do children leverage conceptual representations and external input to acquire abstract linguistic expressions whose referents are fleeting or vary across learning instances?
+        I am broadly interested in language and cognition and, more specifically, I would like to explore how children tackle the learning problem of mapping meaning onto linguistic form. I am interested in exploring this process in the following ways:
+    </p>
 
-    <p>         
-<strong style="color: #DC267F;">(b)</strong> Within the <strong>intersection of semantics and pragmatics</strong>, as children encounter external input embedded in rich pragmatic contexts, how do they integrate conceptual primitives or precursors with these pragmatic cues to map meaning onto form? What can this reveal about the developmental trajectory of children's ability to infer meanings that extend beyond literal content?
+    <p>
+        <strong style="color: #DC267F;">(a)</strong> From a <strong>developmental perspective</strong>,
+        what conceptual representations are innate or early emerging, and how do they guide children as they tackle the learning problem of mapping meaning onto linguistic form? How do children leverage conceptual representations and external input to acquire abstract linguistic expressions whose referents are fleeting or vary across learning instances?
+    </p>
 
-    <p>        
-<strong style="color: #DC267F;">(c)</strong> With a focus on <strong> informing theory</strong>, how can developmental data inform and constrain formal semantic and pragmatic theory? How can a deeper understanding of early-emerging or innate conceptual primitives inform formal linguistic theory? Similarly, how can developmental data deepen our understanding of the mechanisms that allow us to derive meanings that extend beyond the literal content of a sentence?
-    <p> 
+    <p>
+        <strong style="color: #DC267F;">(b)</strong> Within the <strong>intersection of semantics and pragmatics</strong>,
+        as children encounter external input embedded in rich pragmatic contexts, how do they integrate conceptual primitives or precursors with these pragmatic cues to map meaning onto form? What can this reveal about the developmental trajectory of children's ability to infer meanings that extend beyond literal content?
+    </p>
 
-<hr style="border: none; height: 5px; background-image: repeating-linear-gradient(90deg, #DC267F, #DC267F 5px, transparent 5px, transparent 10px);">
+    <p>
+        <strong style="color: #DC267F;">(c)</strong> With a focus on <strong>informing theory</strong>,
+        how can developmental data inform and constrain formal semantic and pragmatic theory? How can a deeper understanding of early-emerging or innate conceptual primitives inform formal linguistic theory? Similarly, how can developmental data deepen our understanding of the mechanisms that allow us to derive meanings that extend beyond the literal content of a sentence?
+    </p>
 
+    <hr style="border: none; height: 5px; background-image: repeating-linear-gradient(90deg, #DC267F, #DC267F 5px, transparent 5px, transparent 10px);">
 
-<p>
-    <strong style="color: #648FFF;">Currently, I am working on a number of projects through the Snedeker Lab. You can learn more about them below!</strong>
-<p>
-
-</p>
+    <p>
+        <strong style="color: #648FFF;">Currently, I am working on a number of projects through the Snedeker Lab. You can learn more about them below!</strong>
+    </p>
+</body>
+</html>
 
 <!-- PROJECT 1 -->
 <div class="qa-dropdown">
@@ -261,7 +275,7 @@ what conceptual representations are innate or early emerging, and how do they gu
     </p>
 
     <p>
-    Through an online computer-based task on the PCIbex platform (Zehr & Schwarz, 2018), participants viewed short videos depicting contact actions (such as hitting or hugging). We modeled their responses, guiding them to select either the agent or the patient. Following the modeling phase, participants applied the learned selection rule to new contact and motion verbs in a test phase, assessing generalization. This work was done with English-speaking adults, English-speaking children, and homesigners based in Nicaragua. I collected data from all three populations and I've presented two posters on this work (<a href="https://hsp2025.github.io/" target="_blank">Human Sentence Processing</a> conference in March 2025 and <a href="https://www.bu.edu/bucld/" target="_blank">Boston University Conference on Child Language Development</a> in November 2025) The abstract for HSP can be found <a href="https://hsp2025.github.io/abstracts/182.pdf" target="_blank">here</a> and the posters I presented can be found <a href="https://hannasophiashine.github.io/posters.html" target="_blank">here</a>!
+    Through an online computer-based task on the PCIbex platform (Zehr & Schwarz, 2018), participants viewed short videos depicting contact events (such as A hitting B or X hugging Y). We modeled their responses, guiding them to select either the agent or the patient. Following the modeling phase, participants applied the learned selection rule to new contact and motion events in a test phase, assessing generalization. This work was done with English-speaking adults, English-speaking children, and homesigners based in Nicaragua. I collected data from all three populations and I've presented two posters on this work (<a href="https://hsp2025.github.io/" target="_blank">Human Sentence Processing</a> conference in March 2025 and the <a href="https://www.bu.edu/bucld/" target="_blank">Boston University Conference on Child Language Development</a> in November 2025). The abstract for HSP can be found <a href="https://hsp2025.github.io/abstracts/182.pdf" target="_blank">here</a> and the posters I presented can be found <a href="https://hannasophiashine.github.io/posters.html" target="_blank">here</a>!
     </p>
 
     <p>
@@ -269,8 +283,17 @@ what conceptual representations are innate or early emerging, and how do they gu
     </p>
 
     <p>
-We are also interested in exploring how event roles interact with linguistic structure and have two follow-up studies we have run with adults! More coming soon!
-    </p>
+We are also interested in exploring how event roles interact with linguistic structure and have two follow-up studies we have run with adults! In the first follow-up study we reversed the direction of generalization (so participants were trained on caused-motion events instead of contact events) and found that adults were again at ceiling during the test phase. In our second follow-up we trained people using the non-linguistic paradigm described above and then explored how they generalized to active and passive sentences to try and learn more about the nature of the representations guiding their explicit categorization. We found that people were very good at generalizing both to active sentences and passive sentences, suggesting that they were using some sort of semantic encoding during this categorization process (with syntactic encoding being the relevant alternative of interest). If you would like to learn more about this work, I presented a poster on it at HSP in March 2026 (abstract <a href="https://hsp2026.org/abstracts/submission_58.pdf" target="_blank">here</a>!) and am giving a talk about it at <a href="https://www.elm-conference.net/wp-content/uploads/ELM4/AbstractBooklet.pdf" target="_blank">ELM4</a> in June 2026! Please reach out to me if you have any questions or suggestions!
+   </p>
+
+    <p>
+<strong>What's next?</strong> Currently, we are working on developing stimuli for an extension of this paradigm to the domain of psychological state verbs. While our second adult follow-up is interesting in and of itself, it also functioned as a "proof of concept" that we can use this paradigm to get at what we think is some form of semantic encoding. Looking ahead, we want to explore how this paradigm can deepen our understanding of psychological state verbs. Do fear-type (experiencer-subject) and frighten-type (experiencer-object) verbs evoke the same thematic roles? If this is the case then we might expect people to easily extend from the Agent-Patient training to both forms of psych verbs. If, on the other hand, fear-type verbs are missing a causal head (as proposed by some theories, see Hartshorne et al., 2016) then we might expect extension to frighten-type verbs but not to fear-type verbs. We are still piloting stimuli for this study but I am very excited to see where this goes!
+
+   </p>
+
+    <p>
+Finally, we are investigating pre-verbal infants' understanding of and ability to represent abstract Agent-Patient concepts. Prior work that has explored this question is informative but limited either because (a) it found sensitivity to role-binding to a particular individual (e.g., Papeo et al., 2024) or (b) the class of events tested was narrow (e.g., Leslie & Keebe, 1987, see also recent replication failure: Meewis et al., 2026). Again, this work is informative, but it doesn't fully support the notion of more abstract relational categories (that extend beyond a particular individual or event). We recently started piloting a task in which 11-13 month olds are habituated to videos in which an experimenter selects the agent (or patient) of an event. During test, the experimenter selects the patient (or the agent if habituated with patient selection). We are interested in whether infants will notice a difference and look longer when the experimenter selects the unexpected event participant.
+</p>
   </div>
 </div>
 
@@ -291,9 +314,10 @@ This study includes both behavioral (standardized tests including the CELF and p
 </p>
 
     <p>
-I supervised Isabel Sichlau (now a <a href="https://elc-lab-ucsd.com/people" target="_blank">lab manager</a>! ) during a 9-week summer internship program. Isabel expressed an interest in the visual adaption component of this study and she presented <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/Sichlau_PPA.pdf" target="_blank">this poster</a> at our summer internship fair in 2024! Currently, I am providing mentorship to Cathyln Boyle, a former undergraduate research assistant on placement from the university of Bath, as she explores how autism and language ability interact and function as predictors of performance in an online sentence completion task in which we modify the contextual support present across sentence trials. We recently submitted an abstract to a conference and Cathlyn is now writing her undergraduate thesis on this work!    </p>
+I supervised Isabel Sichlau (now a <a href="https://elc-lab-ucsd.com/people" target="_blank">lab manager</a>! ) during a 9-week summer internship program. Isabel expressed an interest in the visual adaption component of this study and she presented <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/Sichlau_PPA.pdf" target="_blank">this poster</a> at our summer internship fair in 2024! Currently, I am providing mentorship to Cathyln Boyle, a former undergraduate research assistant on placement from the university of Bath, as she explores how autism and language ability interact and function as predictors of performance in an online sentence completion task in which we modify the contextual support present across sentence trials. Cathlyn recently presented a poster on this work at the International Society for Autism Research (INSAR) conference (poster <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/main/Images/INSAR_2026.pdf" target="_blank">here!</a>) and also recently submitted her undergraduate thesis on this work!    </p>
   </div>
 </div>
+
 
 
 <!-- PROJECT 3 -->
@@ -309,7 +333,7 @@ Working with Jian Cui (doctoral student in Linguistics at Harvard) and Dr. Jesse
     </p>
 
     <p>
-Through an online computer-based task on the PcIbex platform (Zehr & Schwarz, 2018), participants are trained to learn a pluralization rule that involves some combination of feature assignment and counting (e.g., tonal assignment and counting or segmental assignment and non-counting) in an artificial language. We then assess performance on selecting the correct pluralization of novel words in the artificial language and see if it differs signficantly based on some combination of feature and counting. This study was conducted with Cantonese-English bilignuals (more familar with tonal language systems) as well as monolingual English speakers (little to no familiarity with tonal language systems). We found that adults struggle to learn an unattested segmental counting rule relative to its tonal counterpart. We will run this study with children in the spring to better understand whether this asymmetry is rooted in early emerging learning mechanisms or if it is driven by linguistic experience.
+Through an online computer-based task on the PcIbex platform (Zehr & Schwarz, 2018), participants are trained to learn a pluralization rule that involves some combination of feature assignment and counting (e.g., tonal assignment and counting or segmental assignment and non-counting) in an artificial language. We then assess performance on selecting the correct pluralization of novel words in the artificial language and see if it differs signficantly based on some combination of feature and counting. This study was conducted with Cantonese-English bilignuals (more familar with tonal language systems) as well as monolingual English speakers (little to no familiarity with tonal language systems). We found that adults struggle to learn an unattested segmental counting rule relative to its tonal counterpart. We are piloting this study with children now to better understand whether this asymmetry is rooted in early emerging learning mechanisms or if it is driven by linguistic experience.
 </p>
 
     <p>
@@ -349,13 +373,14 @@ While data collection is ongoing (one or two kids left!) preliminary results sug
 
  class="contact">
         <h2>Contact:</h2>
-        <p>Feel free to contact me: <a href="mailto:hshine@fas.harvard.edu">hshine[at]fas[dot]harvard[dot]edu</a></p>
+        <p>Feel free to contact me: <a href="mailto:hshine@fas.harvard.edu">hshine[at]fas[dot]harvard[dot]edu</a> | slowly migrating things to: <a href="mailto:hanna-sophia_shine@brown.edu">hanna-sophia_shine[at]brown[dot]edu</a> </p>
     </div>
    
     <div class="social-links">
         <h2>Other Places you can Find me:</h2>
         <p>
             <a href="https://twitter.com/hannashine14" target="_blank">Twitter</a>
+            <a href="https://bsky.app/profile/hannashine.bsky.social" target="_blank">Bluesky</a>
             <a href="https://github.com/hannasophiashine" target="_blank">GitHub</a>
             <a href="https://osf.io/mu6ef/" target="_blank">OSF</a>
         </p>
