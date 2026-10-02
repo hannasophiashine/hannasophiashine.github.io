@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to my GitHub Page!">
+    <meta name="description" content="Poster presentations by Hanna-Sophia Shine, PhD student in Cognitive and Psychological Sciences at Brown University.">
     <meta name="author" content="Hanna-Sophia Shine">
-    <title>Welcome to My GitHub Pages</title>
+    <title>Hanna-Sophia Shine | Poster Presentations</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -19,40 +19,25 @@
         }
 
         header {
-            background-color: #f4f4f9;
-            color: white;
+            background-color: transparent;
             text-align: left;
             padding: 30px;
+            margin-bottom: 0;
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-style: italic;
             color: #DC267F;
-            margin: 1px 0;
+            text-align: left;
+            margin: 1px;
         }
 
-.bio {
-    display: block; 
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left; 
-    margin-right: 20px; 
-}
-
-        .bio img {
-            width: 380px;
-            height: auto;
-            border: 7px solid #FFB000;
-            border-radius: 20px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            margin-right: 15px;
-        }
-
-        .bio p {
-            font-size: 1.25rem;
-            line-height: 1.6;
-            margin: 1rem 0;
+        .bio {
+            display: block;
+            text-align: left;
+            margin-right: 20px;
+            overflow: hidden;
         }
 
         a {
@@ -64,9 +49,54 @@
             color: #FE6100;
         }
 
-        .content {
-            margin: 40px;
+        hr.dashed {
+            border: none;
+            height: 5px;
+            background-image: repeating-linear-gradient(90deg, #DC267F, #DC267F 5px, transparent 5px, transparent 10px);
+        }
+
+        /* Poster list */
+        .poster-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .poster-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .thumb {
+            flex: 0 0 100px;
+            margin-right: 20px;
             text-align: center;
+        }
+
+        .thumb img {
+            max-width: 100px;
+            max-height: 130px;
+            height: auto;
+            border: 2px solid #FFB000;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .citation,
+        .citation:visited {
+            color: #DC267F;
+            font-size: 1.2rem;
+        }
+
+        .citation p {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .note {
+            font-size: 1rem;
+            font-style: italic;
+            color: #648FFF;
         }
 
         footer {
@@ -79,330 +109,233 @@
             margin-top: 20px;
         }
 
-        .contact, .social-links, .additional-links {
+        .additional-links {
             text-align: left;
             margin-right: 20px;
         }
 
-        .contact h2, .social-links h2, .additional-links h2 {
+        .additional-links h2 {
             font-size: 2rem;
             font-family: 'Courier New', Courier, monospace;
             letter-spacing: 3px;
-            margin-bottom: 20px;
-        }
-
-        .contact h2 {
+            margin-bottom: 10px;
             color: #FFB000;
             text-shadow: 2px 2px #FFB000;
-            transform: rotate(0deg);
             background: linear-gradient(45deg, #DC267F, #648FFF);
-            margin-bottom: 0px;
-            padding-bottom: 1px;
-            margin-top: 40px;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            margin-top: 0px;
+            padding-bottom: 5px;
         }
 
-   <style>
-    .social-links, .additional-links {
-        text-align: left;
-        margin-right: 20px;
-    }
+        .additional-links a {
+            font-size: 1.25rem;
+            color: #648FFF;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 0px;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
 
-    .social-links h2, .additional-links h2 {
-        font-size: 2rem;
-        font-family: 'Courier New', Courier, monospace;
-        letter-spacing: 3px;
-        margin-bottom: 10px;
-        color: #FFB000;
-        text-shadow: 2px 2px #FFB000;
-        transform: rotate(-0deg);
-        background: linear-gradient(45deg, #DC267F, #648FFF);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-top: 0px;
-        padding-bottom: 5px;
-    }
+        .additional-links a:hover {
+            color: #DC267F;
+            text-decoration: underline;
+        }
+    </style>
+</head>
 
-    .social-links a, .additional-links a {
-        font-size: 1.25rem;
-        color: #648FFF;
-        font-weight: bold;
-        text-decoration: none;
-        padding: 0px;
-        margin-right: 10px;
-        transition: all 0.3s ease;
-    }
-
-    .social-links a:hover, .additional-links a:hover {
-        color: #DC267F;
-        text-decoration: underline;
-    }
-</style>
 <body>
-<header style="background-color: transparent; margin-bottom: 0;">
-    <h1 style="font-size: 2.5rem; font-style: italic; color: #DC267F; text-align: left; margin: 1px;">
-        Hanna-Sophia Shine
-    </h1>
-</header>
+    <header>
+        <h1>Hanna-Sophia Shine</h1>
+    </header>
 
-<div class="bio" style="overflow: hidden;">
+    <div class="bio">
+        <hr class="dashed">
 
-<hr style="border: none; height: 5px; background-image: repeating-linear-gradient(90deg, #DC267F, #DC267F 5px, transparent 5px, transparent 10px);">
+        <h2 style="color: #FE6100;">Posters</h2>
+        <p class="note">*Denotes co-first authors.</p>
 
-<h2 style="color: #FE6100;">Posters</h2>
-<ul style="list-style-type: none; padding-left: 0;">
+        <ul class="poster-list">
 
+            <li>
+                <div class="thumb"><img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/INSAR_2026.jpg" alt="Thumbnail of INSAR 2026 poster"></div>
+                <a class="citation" href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/INSAR_2026.jpg" target="_blank">
+                    <p>Boyle, C. T., <strong>Shine, H. G.,</strong> Levari, T., &amp; Snedeker, J. (2026, April).
+                    <em>The Use of Context in Sentence Completion: The Role of Language Ability in Children with and without Autism.</em>
+                    Poster presented at the 2026 Annual Meeting of the International Society for Autism Research, Prague, CZ.</p>
+                </a>
+            </li>
 
-<li style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/INSAR_2026.jpg" 
-         alt="Poster 2 Thumbnail" 
-         style="width: 60px; height: auto; margin-right: 60px; border: 2px solid #FFB000; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-    <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/INSAR_2026.jpg" target="_blank" style="color: #DC267F; font-size: 1.2rem;">
-        <p>
-          Boyle, C. T., <strong>Shine, H. G.,</strong> Levari, T., & Snedeker, J. (2026, April).   
-            <em>The Use of Context in Sentence Completion: The Role of Language Ability in Children with and without Autism.</em> 
-            Poster presented at the 2026 Annual Meeting of the International Society for Autism Research, Prague, CZ. 
-        </p>
-    </a>
-</li>
+            <li>
+                <div class="thumb"><img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/HSP_2026.jpg" alt="Thumbnail of HSP 2026 poster"></div>
+                <a class="citation" href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/HSP_2026.jpg" target="_blank">
+                    <p><strong>Shine, H. G.,</strong> Canudas-Grabolosa, I., &amp; Snedeker, J. (2026, March).
+                    <em>English-Speaking Adults Readily Deploy Agent and Patient Categories in Both Non-Linguistic and Linguistic Tasks.</em>
+                    Poster presented at the 39th Annual Conference on Human Sentence Processing, Cambridge, MA.</p>
+                </a>
+            </li>
 
-<li style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/HSP_2026.jpg" 
-         alt="Poster 2 Thumbnail" 
-         style="width: 100px; height: auto; margin-right: 20px; border: 2px solid #FFB000; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-    <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images?HSP_2026.jpg" target="_blank" style="color: #DC267F; font-size: 1.2rem;">
-        <p>
-          <strong>Shine, H. G.,</strong> Canudas-Grabolosa, I., & Snedeker, J. (2026, March).   
-            <em>English-Speaking Adults Readily Deploy Agent and Patient Categories in Both Non-Linguistic and Linguistic Tasks.</em> 
-            Poster presented at the 39th Annual Conference on Human Sentence Processing, Cambridge, MA. 
-        </p>
-    </a>
-</li>
+            <li>
+                <div class="thumb"><img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/missing.jpg" alt=""></div>
+                <span class="citation">
+                    <p>Levari, T., Waite, B., <strong>Shine, H. G.,</strong> Yacovone, A., &amp; Snedeker, J. (2025, November).
+                    <em>Lexical Prediction in Children with and without Autism during Naturalistic Listening.</em>
+                    Poster presented at the 50th Boston University Conference on Language Development, Boston, MA.</p>
+                </span>
+            </li>
 
-<li style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/missing.jpg" 
-         alt="Poster 2 Thumbnail" 
-         style="width: 60px; height: auto; margin-right: 60px; border: 2px solid #FFB000; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-    <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main" target="_blank" style="color: #DC267F; font-size: 1.2rem;">
-        <p>
-          Levari, T., Waite, B., <strong>Shine, H. G.,</strong> Yacovone, A., & Snedeker, J. (2025, November).   
-            <em>Lexical Prediction in Children with and without Autism during Naturalistic Listening.</em> 
-            Poster presented at the 50th Boston University Conference on Language Development, Boston, MA. 
-        </p>
-    </a>
-</li>
+            <li>
+                <div class="thumb"><img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/BUCLD50AgPa.jpg" alt="Thumbnail of BUCLD 50 agent and patient poster"></div>
+                <a class="citation" href="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/BUCLD50AgPa.jpg" target="_blank">
+                    <p>*Canudas-Grabolosa, I., <strong>*Shine, H. G.,</strong> Snedeker, J., Coppola, M., &amp; Kocab, A. (2025, November).
+                    <em>Agent and Patient Categories in English-Speaking Children and Homesigners.</em>
+                    Poster presented at the 50th Boston University Conference on Language Development, Boston, MA.</p>
+                </a>
+            </li>
 
-<li style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/BUCLD50AgPa.jpg" 
-         alt="Poster 2 Thumbnail" 
-         style="width: 60px; height: auto; margin-right: 60px; border: 2px solid #FFB000; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-<a href="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/BUCLD50AgPa.jpg" target="_blank" style="color: #DC267F; font-size: 1.2rem;">
-        <p>
-          *Canudas-Grabolosa, I., *<strong>Shine, H. G.,</strong> Snedeker, J., Coppola, M., & Kocab, A. (2025, November).   
-            <em>Agent and Patient Categories in English-Speaking Children and Homesigners.</em> 
-            Poster presented at the 50th Boston University Conference on Language Development, Boston, MA. 
-        </p>
-    </a>
-</li>
+            <li>
+                <div class="thumb"><img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/missing.jpg" alt=""></div>
+                <span class="citation">
+                    <p>Cui, J., <strong>Shine, H. G.,</strong> Do, Y., &amp; Snedeker, J. (2025, November).
+                    <em>Investigating the Tone-Segment Asymmetry in Phonological Counting: A Learnability Experiment.</em>
+                    Poster presented at the 50th Boston University Conference on Language Development, Boston, MA.</p>
+                </span>
+            </li>
 
+            <li>
+                <div class="thumb"><img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/missing.jpg" alt=""></div>
+                <span class="citation">
+                    <p><strong>Shine, H. G.,</strong> &amp; Slevc, L. R. (2025, May).
+                    <em>Aspects of Linguistic Alignment Reflect Social, Not Communicative, Pressures.</em>
+                    Poster presented at the Association for Psychological Science Annual Convention, Washington, D.C.</p>
+                </span>
+            </li>
 
-<li style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/missing.jpg" 
-         alt="Poster 2 Thumbnail" 
-         style="width: 60px; height: auto; margin-right: 60px; border: 2px solid #FFB000; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-    <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main" target="_blank" style="color: #DC267F; font-size: 1.2rem;">
-        <p>
-          Cui, J., <strong>Shine, H. G.,</strong> Do, Y., & Snedeker, J. (2025, November).   
-            <em>Investigating the Tone-Segment Asymmetry in Phonological Counting: A Learnability Experiment.</em> 
-            Poster presented at the 50th Boston University Conference on Language Development, Boston, MA. 
-        </p>
-    </a>
-</li> 
+            <li>
+                <div class="thumb"><img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/HSP_AgPa_Poster.png" alt="Thumbnail of HSP 2025 agent and patient poster"></div>
+                <a class="citation" href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/HSP_AgPa_Poster.png" target="_blank">
+                    <p><strong>Shine, H. G.,</strong> Canudas-Grabolosa, I., Snedeker, J., Coppola, M., &amp; Kocab, A. (2025, March).
+                    <em>Agent and Patient Categories in English-Speaking Adults and Children and Homesigners.</em>
+                    Poster presented at the 38th Annual Conference on Human Sentence Processing, College Park, MD.</p>
+                </a>
+            </li>
 
-<li style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/missing.jpg" 
-         alt="Poster 2 Thumbnail" 
-         style="width: 60px; height: auto; margin-right: 60px; border: 2px solid #FFB000; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-    <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main" target="_blank" style="color: #DC267F; font-size: 1.2rem;">
-        <p>
-          <strong>Shine, H. G.,</strong> & Slevc, L. R. (2025, March).   
-            <em>Aspects of Linguistic Alignment Reflect Social, Not Communicative, Pressures.</em> 
-            Poster presented at the Association for Psychological Science Annual Convention, Washington, D.C. 
-        </p>
-    </a>
-</li>
+            <li>
+                <div class="thumb"><img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/Alignment_HSP_Poster.png" alt="Thumbnail of HSP 2025 accent prestige poster"></div>
+                <a class="citation" href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/Alignment_HSP_Poster.png" target="_blank">
+                    <p><strong>Shine, H. G.,</strong> &amp; Slevc, L. R. (2025, March).
+                    <em>The Influence of Accent Prestige on Lexical and Syntactic Alignment in Dialogue.</em>
+                    Poster presented at the 38th Annual Conference on Human Sentence Processing, College Park, MD.</p>
+                </a>
+            </li>
 
-<li style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/Alignment_HSP_Poster.png" 
-         alt="Poster 2 Thumbnail" 
-         style="width: 100px; height: auto; margin-right: 15px; border: 2px solid #FFB000; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-    <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/Alignment_HSP_Poster.png" target="_blank" style="color: #DC267F; font-size: 1.2rem;">
-        <p>
-          <strong>Shine, H. G.,</strong> & Slevc, L. R. (2025, March).   
-            <em>The Influence of Accent Prestige on Lexical and Syntactic Alignment in Dialogue.</em> 
-            Poster presented at the Conference on Human Sentence Processing, College Park, MD. 
-        </p>
-    </a>
-</li>
-  
-<li style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/HSP_AgPa_Poster.png"          alt="Poster 2 Thumbnail" 
-         style="width: 100px; height: auto; margin-right: 15px; border: 2px solid #FFB000; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-    <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/HSP_AgPa_Poster.png" target="_blank" style="color: #DC267F; font-size: 1.2rem;">
-        <p>
-          <strong>Shine, H. G.,</strong> Canudas-Grabolosa, I., Snedeker, J., Coppola, M., & Kocab, A. (2025, March).   
-            <em>Agent and Patient Categories in English-Speaking Adults and Children and Homesigners.</em> 
-            Poster presented at the Conference on Human Sentence Processing, College Park, MD. 
-        </p>
-    </a>
-</li>
+            <li>
+                <div class="thumb"><img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/missing.jpg" alt=""></div>
+                <span class="citation">
+                    <p>Harris, A., Kleiner, H., Levari, T., <strong>Shine, H. G.,</strong> &amp; Snedeker, J. (2024, June).
+                    <em>Investigating Processing of Emotion Words Using EEG in Children with and without Autism Spectrum Disorder (ASD).</em>
+                    Poster presented at the Neurodevelopmental Annual Seminar (NDAS), Norwich, England.</p>
+                </span>
+            </li>
 
-<li style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/missing.jpg" 
-         alt="Poster 2 Thumbnail" 
-         style="width: 60px; height: auto; margin-right: 60px; border: 2px solid #FFB000; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-    <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main" target="_blank" style="color: #DC267F; font-size: 1.2rem;">
-        <p>
-          Harris, A., Kleiner, H., Levari, T., <strong>Shine, H. G.</strong>, & Snedeker, J. (2024, June).    
-            <em>Investigating Processing of Emotion Words using EEG in Children with and Without Autism Spectrum Disorder (ASD).</em> 
-            Poster presented at the Neurodevelopmental Annual Seminar (NDAS), Norwich, England. 
-        </p>
-    </a>
-</li>
+            <li>
+                <div class="thumb"><img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/missing.jpg" alt=""></div>
+                <span class="citation">
+                    <p>Grose, G., <strong>Shine, H. G.,</strong> &amp; Ramani, G. B. (2024, March).
+                    <em>&ldquo;Being a Mathematician&rdquo; Does Not Affect Children&rsquo;s Persistence on Math Tasks.</em>
+                    Poster presented at the Cognitive Development Society Conference, Pasadena, CA.</p>
+                </span>
+            </li>
 
-<li style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/missing.jpg" 
-         alt="Poster 2 Thumbnail" 
-         style="width: 60px; height: auto; margin-right: 60px; border: 2px solid #FFB000; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-    <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main" target="_blank" style="color: #DC267F; font-size: 1.2rem;">
-        <p>
-          Grose, G., <strong>Shine, H. G.</strong>, & Ramani, G. B. (2024, March).   
-            <em>“Being a Mathematician” Does Not Affect Children’s Persistence on Math Tasks.</em> 
-            Poster presented at the Cognitive Development Society Conference, Pasadena, CA. 
-        </p>
-    </a>
-</li>
+            <li>
+                <div class="thumb"><img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/missing.jpg" alt=""></div>
+                <span class="citation">
+                    <p><strong>Shine, H. G.,</strong> Grose, G., &amp; Ramani, G. B. (2023, May).
+                    <em>&ldquo;Who Is a Mathematician?&rdquo;: How Language Cues Impact Who Children Describe.</em>
+                    Poster presented at the Association for Psychological Science Annual Convention, Washington, D.C.</p>
+                </span>
+            </li>
 
-<li style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/missing.jpg" 
-         alt="Poster 2 Thumbnail" 
-         style="width: 60px; height: auto; margin-right: 60px; border: 2px solid #FFB000; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-    <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main" target="_blank" style="color: #DC267F; font-size: 1.2rem;">
-        <p>
-          <strong>Shine, H. G.</strong>, Grose, G., & Ramani, G. B. (2023, May).   
-            <em>“Who Is a Mathematician?”: How Language Cues Impact Who Children Describe.</em> 
-            Poster presented at the Association for Psychological Science Annual Convention, Washington, D.C. 
-        </p>
-    </a>
-</li>
-  
-<li style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/Primals_APS_23_thumbail.png" 
-         alt="Poster 2 Thumbnail" 
-         style="width: 100px; height: auto; margin-right: 15px; border: 2px solid #FFB000; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-    <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/Primals_APS_23.pdf" target="_blank" style="color: #DC267F; font-size: 1.2rem;">
-        <p>
-           Giles, C., <strong>Shine, H. G.</strong>, Cutri J. N., & Lemay, E. P., Jr. (2023, May).  
-            <em>Primal World Beliefs and Mental Simulation of Relationship Events: Implications for Perceived Partner Responsiveness and Relationship Quality</em>. 
-            Poster presented at the Association for Psychological Science Annual Convention, Washington, D.C. 
-        </p>
-    </a>
-</li>
+            <li>
+                <div class="thumb"><img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/Primals_APS_23_thumbail.png" alt="Thumbnail of APS 2023 primal world beliefs poster"></div>
+                <a class="citation" href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/Primals_APS_23.pdf" target="_blank">
+                    <p>*Giles, C., <strong>*Shine, H. G.,</strong> Cutri, J. N., &amp; Lemay, E. P., Jr. (2023, May).
+                    <em>Primal World Beliefs and Mental Simulation of Relationship Events: Implications for Perceived Partner Responsiveness and Relationship Quality.</em>
+                    Poster presented at the Association for Psychological Science Annual Convention, Washington, D.C.</p>
+                </a>
+            </li>
 
-<li style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/Thesis_URD_23.png" 
-         alt="Poster 2 Thumbnail" 
-         style="width: 100px; height: auto; margin-right: 15px; border: 2px solid #FFB000; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-    <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/Thesis_URD_23.pptx.pdf" target="_blank" style="color: #DC267F; font-size: 1.2rem;">
-        <p>
-            <strong>Shine, H. G.</strong> & Slevc, L. R., (2023, April). 
-            <em>The Influence of Accent Prestige on Lexical and Syntactic Alignment in “Dialogue”</em>. 
-            Poster presented at the University of Maryland Psychology Undergraduate Research Day, College Park, MD. 
-        </p>
-    </a>
-</li>
+            <li>
+                <div class="thumb"><img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/Thesis_URD_23.png" alt="Thumbnail of honors thesis poster"></div>
+                <a class="citation" href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/Thesis_URD_23.pptx.pdf" target="_blank">
+                    <p><strong>Shine, H. G.,</strong> &amp; Slevc, L. R. (2023, April).
+                    <em>The Influence of Accent Prestige on Lexical and Syntactic Alignment in &ldquo;Dialogue.&rdquo;</em>
+                    Poster presented at the University of Maryland Psychology Undergraduate Research Day, College Park, MD.</p>
+                </a>
+            </li>
 
-<li style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/Primals_URD_23.png" 
-         alt="Poster 2 Thumbnail" 
-         style="width: 100px; height: auto; margin-right: 15px; border: 2px solid #FFB000; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-    <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/Primals_URD_23.pptx.pdf" target="_blank" style="color: #DC267F; font-size: 1.2rem;">
-        <p>
-            Little, E. M., <strong>Shine, H. G.</strong>, & Lemay, E. P., Jr. (2023, April). 
-            <em>Implications of Primal World Beliefs for Positive Relationship Illusions, Dyadic Empathy, and Relationship Satisfaction</em>. 
-            Poster presented at the University of Maryland Psychology Undergraduate Research Day, College Park, MD. 
-            <u>Recipient of the Gold Award</u>.
-        </p>
-    </a>
-</li>
-  
-<li style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/LMCL_LSD_23_thumbnail.png" 
-         alt="Poster 2 Thumbnail" 
-         style="width: 100px; height: auto; margin-right: 15px; border: 2px solid #FFB000; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-    <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/LMCL_LSD_23.pdf" target="_blank" style="color: #DC267F; font-size: 1.2rem;">
-        <p>
-            <strong>Shine, H. G.</strong> & Slevc, L. R., (2022, October). 
-            <em>Language Change and Changing Languages: Influences of short- and long-term experience on online language processing.</em>. 
-            Poster presented at the University of Maryland Language Science Day, College Park, MD.
-        </p>
-    </a>
-</li>
-  
-<li style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/IRL_URD_22_thumbnail.png" 
-         alt="Poster 2 Thumbnail" 
-         style="width: 100px; height: auto; margin-right: 15px; border: 2px solid #FFB000; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-    <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/IRL_URD_22.pptx.pdf" target="_blank" style="color: #DC267F; font-size: 1.2rem;">
-        <p>
-            Cheng, Y., <strong>Shine, H. G.</strong>, Xiao, Z., & Lemay, E. P., Jr. (2022, April). 
-            <em>Unpacking the Association between Self-Esteem and Relationship Satisfaction: How this relationship is mediated by both perceived regard and relationship self-efficacy</em>. 
-            Poster presented at the University of Maryland Psychology Undergraduate Research Day, College Park, MD. 
-            <u>Recipient of the Silver Award</u>.
-        </p>
-    </a>
-</li>
-  
-<li style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/ECI_URD_22_thumbnail.png" 
-         alt="ECI 22 Thumbnail" 
-         style="width: 100px; height: auto; margin-right: 15px; border: 2px solid #FFB000; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-    <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/ECI_URD_22.pptx.pdf" target="_blank" style="color: #DC267F; font-size: 1.2rem;">
-        <p>
-            <strong>Shine, H. G.</strong>, Grose, G., Frank, A. P., & Ramani, G. B. (2022, April). 
-            <em>Stereotype Stratification and Math Gender Stereotypes in Elementary Age Girls</em>. 
-            Poster presented at the University of Maryland Undergraduate Research Day, College Park, MD.
-        </p>
-    </a>
-</li>
+            <li>
+                <div class="thumb"><img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/Primals_URD_23.png" alt="Thumbnail of 2023 Undergraduate Research Day primal world beliefs poster"></div>
+                <a class="citation" href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/Primals_URD_23.pptx.pdf" target="_blank">
+                    <p>*Little, E. M., <strong>*Shine, H. G.,</strong> &amp; Lemay, E. P., Jr. (2023, April).
+                    <em>Implications of Primal World Beliefs for Positive Relationship Illusions, Dyadic Empathy, and Relationship Satisfaction.</em>
+                    Poster presented at the University of Maryland Psychology Undergraduate Research Day, College Park, MD.
+                    <u>Recipient of the Gold Award</u>.</p>
+                </a>
+            </li>
 
-</ul>
+            <li>
+                <div class="thumb"><img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/LMCL_LSD_23_thumbnail.png" alt="Thumbnail of 2022 Language Science Day poster"></div>
+                <a class="citation" href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/LMCL_LSD_23.pdf" target="_blank">
+                    <p><strong>Shine, H. G.,</strong> &amp; Slevc, L. R. (2022, October).
+                    <em>Language Change and Changing Languages: Influences of Short- and Long-Term Experience on Online Language Processing.</em>
+                    Poster presented at the University of Maryland Language Science Day, College Park, MD.</p>
+                </a>
+            </li>
 
-<hr style="border: none; height: 5px; background-image: repeating-linear-gradient(90deg, #DC267F, #DC267F 5px, transparent 5px, transparent 10px);">
-</body>
+            <li>
+                <div class="thumb"><img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/IRL_URD_22_thumbnail.png" alt="Thumbnail of 2022 self-esteem and relationship satisfaction poster"></div>
+                <a class="citation" href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/IRL_URD_22.pptx.pdf" target="_blank">
+                    <p>*Cheng, Y., <strong>*Shine, H. G.,</strong> Xiao, Z., &amp; Lemay, E. P., Jr. (2022, April).
+                    <em>Unpacking the Association between Self-Esteem and Relationship Satisfaction: How This Relationship Is Mediated by Both Perceived Regard and Relationship Self-Efficacy.</em>
+                    Poster presented at the University of Maryland Psychology Undergraduate Research Day, College Park, MD.
+                    <u>Recipient of the Silver Award</u>.</p>
+                </a>
+            </li>
 
- 
+            <li>
+                <div class="thumb"><img src="https://raw.githubusercontent.com/hannasophiashine/hannasophiashine.github.io/main/Images/ECI_URD_22_thumbnail.png" alt="Thumbnail of 2022 math gender stereotypes poster"></div>
+                <a class="citation" href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/ECI_URD_22.pptx.pdf" target="_blank">
+                    <p><strong>Shine, H. G.,</strong> Grose, G., Frank, A. P., &amp; Ramani, G. B. (2022, April).
+                    <em>Stereotype Stratification and Math Gender Stereotypes in Elementary-Age Girls.</em>
+                    Poster presented at the University of Maryland Undergraduate Research Day, College Park, MD.</p>
+                </a>
+            </li>
+
+        </ul>
+
+        <hr class="dashed">
+    </div>
+
     <div class="additional-links">
         <h2>More From Me:</h2>
         <p>
             <a href="https://hannasophiashine.github.io" target="_blank">Home Page</a>
-            <a href="https://hannasophiashine.github.io/H.Shine_CV_31926.pdf" target="_blank">View My CV</a>
-            <a href="posters.html" target="_blank">Posters Presentations</a>
+            <a href="https://hannasophiashine.github.io/H.Shine_CV.pdf" target="_blank">View My CV</a>
+            <a href="posters.html" target="_blank">Poster Presentations</a>
             <a href="assorted-resources.html" target="_blank">Assorted Resources</a>
             <a href="https://www.goodreads.com/user/show/164634573-hanna" target="_blank">Other (non-academic-ish) Stuff</a>
         </p>
     </div>
 
-
-
     <footer>
-2025 Hanna-Sophia Shine | Powered by GitHub
+        2026 Hanna-Sophia Shine | Powered by GitHub
         <p>
-    <a href="https://davidmathlogic.com/colorblind/#%23648FFF-%23785EF0-%23DC267F-%23FE6100-%23FFB000" target="_blank">
-        Click here to find my color palette!
-    </a>
-</p>
+            <a href="https://davidmathlogic.com/colorblind/#%23648FFF-%23785EF0-%23DC267F-%23FE6100-%23FFB000" target="_blank">
+                Click here to find my color palette!
+            </a>
+        </p>
     </footer>
 </body>
 
