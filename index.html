@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to my GitHub Page!">
+    <meta name="description" content="Hanna-Sophia Shine, PhD student in Cognitive and Psychological Sciences at Brown University">
     <meta name="author" content="Hanna-Sophia Shine">
     <title>Hanna-Sophia Shine | Graduate Student</title>
     <link rel="stylesheet" href="styles.css">
@@ -106,12 +106,6 @@
             -webkit-text-fill-color: transparent;
         }
 
-        .social-links,
-        .additional-links {
-            text-align: left;
-            margin-right: 20px;
-        }
-
         .social-links h2,
         .additional-links h2 {
             font-size: 2rem;
@@ -167,6 +161,11 @@
             background-color: #e6e6e6;
         }
 
+        .qa-question:focus-visible {
+            outline: 3px solid #648FFF;
+            outline-offset: 2px;
+        }
+
         .qa-answer {
             display: none;
             padding: 12px 16px;
@@ -176,17 +175,45 @@
             border-radius: 4px;
         }
 
-        .qa-dropdown.open .qa-answer {
+        /* ">" so opening the outer dropdown doesn't open every project inside it */
+        .qa-dropdown.open > .qa-answer {
             display: block;
+        }
+
+        /* Outer "lab" dropdown: a bit larger, with a blue accent */
+        .lab-dropdown > .qa-question {
+            font-size: 1.4rem;
+            color: #648FFF;
+            background-color: #e9ecf8;
+        }
+
+        .lab-dropdown > .qa-question:hover {
+            background-color: #dde2f4;
+        }
+
+        .lab-dropdown > .qa-answer {
+            border-left-color: #648FFF;
+            background-color: #f9f9fc;
+        }
+
+        .lab-dropdown .qa-dropdown {
+            margin: 12px 0;
+        }
+
+        .status-note {
+            font-style: italic;
+            color: #785EF0;
         }
     </style>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             document.querySelectorAll(".qa-question").forEach(btn => {
+                btn.setAttribute("aria-expanded", "false");
                 btn.addEventListener("click", function() {
                     const container = this.parentElement;
-                    container.classList.toggle("open");
+                    const isOpen = container.classList.toggle("open");
+                    this.setAttribute("aria-expanded", isOpen ? "true" : "false");
                 });
             });
         });
@@ -201,32 +228,29 @@
     </header>
 
     <div class="bio" style="overflow: hidden;">
-<img src="https://hannasophiashine.github.io/Images/git_profilepic_26.png"
-     alt="GitHub Profile Picture"
-     style="float: left; width: 320px; height: auto; border: 7px solid #FFB000; border-radius: 20px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); margin-right: 15px; margin-bottom: 15px;">
+        <img src="https://hannasophiashine.github.io/Images/git_profilepic_26.png"
+             alt="Photo of Hanna-Sophia Shine"
+             style="float: left; width: 320px; height: auto; border: 7px solid #FFB000; border-radius: 20px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); margin-right: 15px; margin-bottom: 15px;">
         <p>
-
-            Hello! My name is Hanna and I am a graduate student in the
-            <a href="https://sites.brown.edu/bltlab/" target="_blank">Brown Language and Thought Lab</a> working with 
-            <a href="https://vivo.brown.edu/display/rfeiman" target="_blank" rel="noopener noreferrer">
-            Dr. Roman Feiman</a>. Previously, I was the lab manager for the
+            Hello! My name is Hanna (I use Hanna-Sophia academically so as not to be confused with 
+            <a href="https://soundcloud.com/hannashinedj" target="_blank">DJ Hanna Shine</a>, she seems cool though!). I am a PhD student in 
+            <a href="https://copsy.brown.edu/people/graduate-students" target="_blank">Cognitive and Psychological Sciences</a> at Brown University, where I work in the
+            <a href="https://sites.brown.edu/bltlab/" target="_blank">Brown Language and Thought Lab</a> with
+            <a href="https://vivo.brown.edu/display/rfeiman" target="_blank" rel="noopener noreferrer">Dr. Roman Feiman</a>. Previously, I was the lab manager for the
             <a href="https://www.harvardlds.org/our-labs/snedeker-lab/" target="_blank">Snedeker Lab</a> (June 2023 - July 2026) and a lab manager for the
-            <a href="https://ai4commsci.github.io/index.html" target="_blank">Ai4CommSci Lab</a> (September 2025 - July 2026). I graduated from the
-            <a href="https://www.umd.edu" target="_blank">University of Maryland, College Park</a> in May 2023 with a B.S. in
-            <a href="https://psyc.umd.edu/" target="_blank">Psychology</a> and a minor in
-            <a href="https://academiccatalog.umd.edu/undergraduate/colleges-schools/arts-humanities/classical-languages-literature/classical-mythology-minor/#requirementstext" target="_blank">Classical Mythology</a>.
+            <a href="https://ai4commsci.github.io/index.html" target="_blank">Ai4CommSci Lab</a> (September 2025 - July 2026). I graduated from the University of Maryland, College Park in May 2023 with a B.S. in Psychology Classical Mythology.
             As an undergrad at UMD, I was a research assistant in the
             <a href="https://sites.google.com/umd.edu/ecilab/home?authuser=0" target="_blank">Early Childhood Interaction Lab</a>,
             the <a href="https://irlumd.weebly.com/" target="_blank">Interpersonal Relationships Lab</a>, and the
             <a href="https://lmcl-umd.github.io/" target="_blank">Language and Music Cognition Lab</a>. I wrote my undergraduate thesis under the mentorship of
-            <a href="https://lmcl-umd.github.io/authors/bob/" target="_blank">Dr. Bob Slevc</a> on the influence of perceived accent prestige on lexical and syntactic alignment in “dialogue”
+            <a href="https://lmcl-umd.github.io/authors/bob/" target="_blank">Dr. Bob Slevc</a> on the influence of perceived accent prestige on lexical and syntactic alignment in &ldquo;dialogue&rdquo;
             (<a href="https://osf.io/sp9ag" target="_blank">OSF</a>,
-            <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/Thesis_URD_23.pptx.pdf" target="_blank">poster 1</a> &
+            <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/Thesis_URD_23.pptx.pdf" target="_blank">poster 1</a> &amp;
             <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/Alignment_HSP_Poster.png" target="_blank">poster 2</a>).
         </p>
 
         <p>
-            <strong>Advice & Mentorship:</strong> If you are an undergraduate or post-baccalaureate RA who is interested in learning more about the lab manager application process (or what the job entails), or the graduate school application process, please don't hesitate to reach out! I would be more than happy to talk about my experience and/or provide feedback on materials if I can :)
+            <strong>Advice &amp; Mentorship:</strong> If you are an undergraduate or post-baccalaureate RA who is interested in learning more about the lab manager application process (or what the job entails), or the PhD application process, please don't hesitate to reach out! I would be more than happy to talk about my experience and/or provide feedback on materials if I can :)
         </p>
 
         <hr style="border: none; height: 5px; background-image: repeating-linear-gradient(90deg, #DC267F, #DC267F 5px, transparent 5px, transparent 10px);">
@@ -251,133 +275,144 @@
         how can developmental data inform and constrain formal semantic and pragmatic theory? How can a deeper understanding of early-emerging or innate conceptual primitives inform formal linguistic theory? Similarly, how can developmental data deepen our understanding of the mechanisms that allow us to derive meanings that extend beyond the literal content of a sentence?
     </p>
 
+    <p>
+        <strong style="color: #DC267F;">Currently:</strong> I recently joined a project that (hopefully!) addresses a small piece of a really big question: how is thought structured? Specifically, we are investigating whether role-filler independence (the ability to represent a relation separately from the entities that fill it) is a property of perception itself, or whether its use in visual processing tasks is mediated by language.
+    </p>
+
     <hr style="border: none; height: 5px; background-image: repeating-linear-gradient(90deg, #DC267F, #DC267F 5px, transparent 5px, transparent 10px);">
 
     <p>
-        <strong style="color: #648FFF;">Currently, I am working on a number of projects through the Snedeker Lab. You can learn more about them below!</strong>
-    </p>
-</body>
-</html>
-
-<!-- PROJECT 1 -->
-<div class="qa-dropdown">
-  <button class="qa-question">
-    <strong style="color: #FE6100;">(1)</strong>
-    <strong>Do the thematic roles of agent (the doer) and patient (the affected entity) serve as a readily available dimension for categorizing event participants in the absence of explicit language?</strong>
-  </button>
-
-  <div class="qa-answer">
-    <p>
-      Working with Dr. Irene Canudas Grabolosa and Dr. Jesse Snedeker we are investigating whether individuals can access the Agent-Patient relational concept and use it to explicitly categorize event participants engaged in contact and cause-motion events. <i>Spoiler:</i> they do!
+        <strong style="color: #648FFF;">You can learn more about the projects I worked on as a lab manager below (some are ongoing collaborations)!</strong>
     </p>
 
-    <p>
-    Through an online computer-based task on the PCIbex platform (Zehr & Schwarz, 2018), participants viewed short videos depicting contact events (such as A hitting B or X hugging Y). We modeled their responses, guiding them to select either the agent or the patient. Following the modeling phase, participants applied the learned selection rule to new contact and motion events in a test phase, assessing generalization. This work was done with English-speaking adults, English-speaking children, and homesigners based in Nicaragua. I collected data from all three populations and I've presented two posters on this work (<a href="https://hsp2025.github.io/" target="_blank">Human Sentence Processing</a> conference in March 2025 and the <a href="https://www.bu.edu/bucld/" target="_blank">Boston University Conference on Child Language Development</a> in November 2025). The abstract for HSP can be found <a href="https://hsp2025.github.io/abstracts/182.pdf" target="_blank">here</a> and the posters I presented can be found <a href="https://hannasophiashine.github.io/posters.html" target="_blank">here</a>!
-    </p>
+    <!-- SNEDEKER LAB (outer dropdown) -->
+    <div class="qa-dropdown lab-dropdown">
+        <button class="qa-question">
+            <strong>Projects from my time in the Snedeker Lab (2023 - 2026)</strong>
+        </button>
 
-    <p>
-<strong>What did we find?</strong> We found that English-speaking adults and children can deploy Agent-Patient concepts for explicit categorization, suggesting that these concepts are readily accessible by the age of four. Importantly, Homesigners are also able to do this, suggesting the Agent-Patient relational concept is not something we extract from language but rather is brought to the language acquisition process by the learner.
-    </p>
+        <div class="qa-answer">
 
-    <p>
-We are also interested in exploring how event roles interact with linguistic structure and have two follow-up studies we have run with adults! In the first follow-up study we reversed the direction of generalization (so participants were trained on caused-motion events instead of contact events) and found that adults were again at ceiling during the test phase. In our second follow-up we trained people using the non-linguistic paradigm described above and then explored how they generalized to active and passive sentences to try and learn more about the nature of the representations guiding their explicit categorization. We found that people were very good at generalizing both to active sentences and passive sentences, suggesting that they were using some sort of semantic encoding during this categorization process (with syntactic encoding being the relevant alternative of interest). If you would like to learn more about this work, I presented a poster on it at HSP in March 2026 (abstract <a href="https://hsp2026.org/abstracts/submission_58.pdf" target="_blank">here</a>!) and am giving a talk about it at <a href="https://www.elm-conference.net/wp-content/uploads/ELM4/AbstractBooklet.pdf" target="_blank">ELM4</a> in June 2026! Please reach out to me if you have any questions or suggestions!
-   </p>
+            <!-- PROJECT 1 -->
+            <div class="qa-dropdown">
+                <button class="qa-question">
+                    <strong style="color: #FE6100;">(1)</strong>
+                    <strong>Do the thematic roles of agent (the doer) and patient (the affected entity) serve as a readily available dimension for categorizing event participants in the absence of explicit language?</strong>
+                </button>
 
-    <p>
-<strong>What's next?</strong> Currently, we are working on developing stimuli for an extension of this paradigm to the domain of psychological state verbs. While our second adult follow-up is interesting in and of itself, it also functioned as a "proof of concept" that we can use this paradigm to get at what we think is some form of semantic encoding. Looking ahead, we want to explore how this paradigm can deepen our understanding of psychological state verbs. Do fear-type (experiencer-subject) and frighten-type (experiencer-object) verbs evoke the same thematic roles? If this is the case then we might expect people to easily extend from the Agent-Patient training to both forms of psych verbs. If, on the other hand, fear-type verbs are missing a causal head (as proposed by some theories, see Hartshorne et al., 2016) then we might expect extension to frighten-type verbs but not to fear-type verbs. We are still piloting stimuli for this study but I am very excited to see where this goes!
+                <div class="qa-answer">
+                    <p>
+                        Working with Dr. Irene Canudas Grabolosa and Dr. Jesse Snedeker we are investigating whether individuals can access the Agent-Patient relational concept and use it to explicitly categorize event participants engaged in contact and caused-motion events. <i>Spoiler:</i> they do!
+                    </p>
 
-   </p>
+                    <p>
+                        Through an online computer-based task on the PCIbex platform (Zehr &amp; Schwarz, 2018), participants viewed short videos depicting contact events (such as A hitting B or X hugging Y). We modeled their responses, guiding them to select either the agent or the patient. Following the modeling phase, participants applied the learned selection rule to new contact and motion events in a test phase, assessing generalization. This work was done with English-speaking adults, English-speaking children, and homesigners based in Nicaragua. I collected data from all three populations and I've presented two posters on this work (<a href="https://hsp2025.github.io/" target="_blank">Human Sentence Processing</a> conference in March 2025 and the <a href="https://www.bu.edu/bucld/" target="_blank">Boston University Conference on Language Development</a> in November 2025). The abstract for HSP can be found <a href="https://hsp2025.github.io/abstracts/182.pdf" target="_blank">here</a> and the posters I presented can be found <a href="https://hannasophiashine.github.io/posters.html" target="_blank">here</a>!
+                    </p>
 
-    <p>
-Finally, we are investigating pre-verbal infants' understanding of and ability to represent abstract Agent-Patient concepts. Prior work that has explored this question is informative but limited either because (a) it found sensitivity to role-binding to a particular individual (e.g., Papeo et al., 2024) or (b) the class of events tested was narrow (e.g., Leslie & Keebe, 1987, see also recent replication failure: Meewis et al., 2026). Again, this work is informative, but it doesn't fully support the notion of more abstract relational categories (that extend beyond a particular individual or event). We recently started piloting a task in which 11-13 month olds are habituated to videos in which an experimenter selects the agent (or patient) of an event. During test, the experimenter selects the patient (or the agent if habituated with patient selection). We are interested in whether infants will notice a difference and look longer when the experimenter selects the unexpected event participant.
-</p>
-  </div>
-</div>
+                    <p>
+                        <strong>What did we find?</strong> We found that English-speaking adults and children can deploy Agent-Patient concepts for explicit categorization, suggesting that these concepts are readily accessible by the age of four. Importantly, homesigners are also able to do this, suggesting the Agent-Patient relational concept is not something we extract from language but rather is brought to the language acquisition process by the learner.
+                    </p>
 
+                    <p>
+                        We are also interested in exploring how event roles interact with linguistic structure and have run two follow-up studies with adults! In the first follow-up study we reversed the direction of generalization (so participants were trained on caused-motion events instead of contact events) and found that adults were again at ceiling during the test phase. In our second follow-up we trained people using the non-linguistic paradigm described above and then explored how they generalized to active and passive sentences to try and learn more about the nature of the representations guiding their explicit categorization. We found that people were very good at generalizing both to active sentences and passive sentences, suggesting that they were using some sort of semantic encoding during this categorization process (with syntactic encoding being the relevant alternative of interest). If you would like to learn more about this work, I presented a poster on it at HSP in March 2026 (abstract <a href="https://hsp2026.org/abstracts/submission_58.pdf" target="_blank">here</a>!) and gave a talk about it at <a href="https://www.elm-conference.net/wp-content/uploads/ELM4/AbstractBooklet.pdf" target="_blank">ELM4</a> in June 2026! Please reach out to me if you have any questions or suggestions!
+                    </p>
 
-<!-- PROJECT 2 -->
-<div class="qa-dropdown">
-  <button class="qa-question">
-    <strong style="color: #FE6100;">(2)</strong>
-    <strong>Do the traits that we see in autistic individuals reflect a global prediction impairment?</strong>
-  </button>
+                    <p>
+                        <strong>Extending to psych verbs:</strong> Our second adult follow-up also functioned as a "proof of concept" that we can use this paradigm to get at what we think is some form of semantic encoding, so we began developing stimuli to extend it to psychological state verbs. Do fear-type (experiencer-subject) and frighten-type (experiencer-object) verbs evoke the same thematic roles? If this is the case then we might expect people to easily extend from the Agent-Patient training to both forms of psych verbs. If, on the other hand, fear-type verbs are missing a causal head (as proposed by some theories, see Hartshorne et al., 2016) then we might expect extension to frighten-type verbs but not to fear-type verbs. <span class="status-note">This study is currently on pause.</span>
+                    </p>
 
-  <div class="qa-answer">
-    <p>
-</strong> Working with Dr. Tanya Levari, Briony Waite (doctoral student), and Dr. Jesse Snedeker we are assessing predictive abilities across a wide range of perceptual, cognitive, and linguistic domains in a single group of children with autism. By working with one well-characterized sample, want aim to see whether there are shared underlying mechanisms at work across these domains, or, if observed, predictive impairments are domain-specific, affecting some areas but not others.    </p>
+                    <p>
+                        <strong>What's next?</strong> We are investigating pre-verbal infants' understanding of and ability to represent abstract Agent-Patient concepts, now in collaboration with Pablo Rodriguez Osztreicher (doctoral student at Harvard). Prior work that has explored this question is informative but limited either because (a) it found sensitivity to role-binding to a particular individual (e.g., Papeo et al., 2024) or (b) the class of events tested was narrow (e.g., Leslie &amp; Keeble, 1987, see also recent replication failure: Meewis et al., 2026). Again, this work is informative, but it doesn't fully support the notion of more abstract relational categories (that extend beyond a particular individual or event). In our task, 11-13 month olds are habituated to videos in which an experimenter selects the agent (or patient) of an event. During test, the experimenter selects the patient (or the agent if habituated with patient selection). We are interested in whether infants will notice a difference and look longer when the experimenter selects the unexpected event participant. We finished piloting this summer and are now moving the study online!
+                    </p>
+                </div>
+            </div>
 
-    <p>
-This study includes both behavioral (standardized tests including the CELF and part of the Kbit) and brain measures (EEG) and a parallel study is being conducted with adults to allow for an exploration of the developmental trajectory of predictive abilities in this population. In addition to recruiting and running 19 ASD participants in both the EEG portion of the study (~ 2 hour appointments) and the behavioral portion of the study (~1.5 hour appointments) I have supervised two multi-week projects.
-</p>
+            <!-- PROJECT 2 -->
+            <div class="qa-dropdown">
+                <button class="qa-question">
+                    <strong style="color: #FE6100;">(2)</strong>
+                    <strong>Do the traits that we see in autistic individuals reflect a global prediction impairment?</strong>
+                </button>
 
-    <p>
-I supervised Isabel Sichlau (now a <a href="https://elc-lab-ucsd.com/people" target="_blank">lab manager</a>! ) during a 9-week summer internship program. Isabel expressed an interest in the visual adaption component of this study and she presented <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/Sichlau_PPA.pdf" target="_blank">this poster</a> at our summer internship fair in 2024! Currently, I am providing mentorship to Cathyln Boyle, a former undergraduate research assistant on placement from the university of Bath, as she explores how autism and language ability interact and function as predictors of performance in an online sentence completion task in which we modify the contextual support present across sentence trials. Cathlyn recently presented a poster on this work at the International Society for Autism Research (INSAR) conference (poster <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/main/Images/INSAR_2026.pdf" target="_blank">here!</a>) and also recently submitted her undergraduate thesis on this work!    </p>
-  </div>
-</div>
+                <div class="qa-answer">
+                    <p>
+                        Working with Dr. Tanya Levari, Briony Waite (doctoral student), and Dr. Jesse Snedeker we assessed predictive abilities across a wide range of perceptual, cognitive, and linguistic domains in a single group of children with autism. By working with one well-characterized sample, we aim to see whether there are shared underlying mechanisms at work across these domains, or whether predictive impairments, if observed, are domain-specific, affecting some areas but not others.
+                    </p>
 
+                    <p>
+                        This study includes both behavioral (standardized tests including the CELF and part of the KBIT) and brain measures (EEG), and a parallel study is being conducted with adults to allow for an exploration of the developmental trajectory of predictive abilities in this population. In addition to recruiting and running 19 autistic participants in both the EEG portion of the study (~2 hour appointments) and the behavioral portion of the study (~1.5 hour appointments), I supervised two multi-week projects.
+                    </p>
 
+                    <p>
+                        I supervised Isabel Sichlau (now a <a href="https://elc-lab-ucsd.com/people" target="_blank">lab manager</a>!) during a 9-week summer internship program. Isabel expressed an interest in the visual adaptation component of this study and she presented <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/Sichlau_PPA.pdf" target="_blank">this poster</a> at our summer internship fair in 2024! I also mentored Cathlyn Boyle, a former undergraduate research assistant on placement from the University of Bath, as she explored how autism and language ability interact and function as predictors of performance in an online sentence completion task in which we modified the contextual support present across sentence trials. Cathlyn presented a poster on this work at the International Society for Autism Research (INSAR) conference in 2026 (poster <a href="https://github.com/hannasophiashine/hannasophiashine.github.io/blob/main/Images/INSAR_2026.pdf" target="_blank">here!</a>) and submitted her undergraduate thesis on this work!
+                    </p>
+                </div>
+            </div>
 
-<!-- PROJECT 3 -->
-<div class="qa-dropdown">
-  <button class="qa-question">
-    <strong style="color: #FE6100;">(3)</strong>
-    <strong>Is the counting pattern observed in tonal morpho-phonology due to a synchronic learnability gap or a diachronic accidental gap?</strong>
-  </button>
+            <!-- PROJECT 3 -->
+            <div class="qa-dropdown">
+                <button class="qa-question">
+                    <strong style="color: #FE6100;">(3)</strong>
+                    <strong>Is the counting pattern observed in tonal morpho-phonology due to a synchronic learnability gap or a diachronic accidental gap?</strong>
+                </button>
 
-  <div class="qa-answer">
-    <p>
-Working with Jian Cui (doctoral student in Linguistics at Harvard) and Dr. Jesse Snedeker we are exploring this typological asymmetry and how feature (tone vs. segment) and counting (counting vs. non-counting) interact to influence performance on a task that involves learning a morphological (i.e., pluralization) rule in an artificial language.
-    </p>
+                <div class="qa-answer">
+                    <p>
+                        Working with Jian Cui (doctoral student in Linguistics at Harvard) and Dr. Jesse Snedeker we are exploring this typological asymmetry and how feature (tone vs. segment) and counting (counting vs. non-counting) interact to influence performance on a task that involves learning a morphological (i.e., pluralization) rule in an artificial language.
+                    </p>
 
-    <p>
-Through an online computer-based task on the PcIbex platform (Zehr & Schwarz, 2018), participants are trained to learn a pluralization rule that involves some combination of feature assignment and counting (e.g., tonal assignment and counting or segmental assignment and non-counting) in an artificial language. We then assess performance on selecting the correct pluralization of novel words in the artificial language and see if it differs signficantly based on some combination of feature and counting. This study was conducted with Cantonese-English bilignuals (more familar with tonal language systems) as well as monolingual English speakers (little to no familiarity with tonal language systems). We found that adults struggle to learn an unattested segmental counting rule relative to its tonal counterpart. We are piloting this study with children now to better understand whether this asymmetry is rooted in early emerging learning mechanisms or if it is driven by linguistic experience.
-</p>
+                    <p>
+                        Through an online computer-based task on the PCIbex platform (Zehr &amp; Schwarz, 2018), participants are trained to learn a pluralization rule that involves some combination of feature assignment and counting (e.g., tonal assignment and counting or segmental assignment and non-counting) in an artificial language. We then assess performance on selecting the correct pluralization of novel words in the artificial language and see if it differs significantly based on some combination of feature and counting. This study was conducted with Cantonese-English bilinguals (more familiar with tonal language systems) as well as monolingual English speakers (little to no familiarity with tonal language systems). We found that adults struggle to learn an unattested segmental counting rule relative to its tonal counterpart. You can read our paper in the <a href="https://doi.org/10.7275/amphonology.3699" target="_blank">Proceedings of the Annual Meetings on Phonology</a>!
+                    </p>
 
-    <p>
-    </p>
-  </div>
-</div>
+                    <p>
+                        We also began piloting this study with children to better understand whether this asymmetry is rooted in early emerging learning mechanisms or if it is driven by linguistic experience. <span class="status-note">The child study is currently on pause.</span>
+                    </p>
+                </div>
+            </div>
 
+            <!-- PROJECT 4 -->
+            <div class="qa-dropdown">
+                <button class="qa-question">
+                    <strong style="color: #FE6100;">(4)</strong>
+                    <strong>Can preschoolers use event dynamics to infer temporal order in language?</strong>
+                </button>
 
-<!-- PROJECT 4 -->
-<div class="qa-dropdown">
-  <button class="qa-question">
-    <strong style="color: #FE6100;">(4)</strong>
-    <strong>Can preschoolers use event dynamics to infer temporal order in language?</strong>
-  </button>
+                <div class="qa-answer">
+                    <p>
+                        Working with Elena Marx (doctoral student at CEU), Dr. Eva Wittenberg, and Dr. Jesse Snedeker we are exploring whether children (4;0 - 4;11) make use of the dynamic properties of situations to infer temporal order in otherwise ambiguous sentences that use a relative clause construction.
+                    </p>
 
-  <div class="qa-answer">
-    <p>
-Working with Elena Marx (doctoral student at CEU), Dr. Eva Wittenberg, and Dr. Jesse Snedeker we are exploring whether children (4;0 - 4;11) make use of the dynamic properties of situations to infer temporal order in otherwise ambiguous sentences that use a relative clause construction.    </p>
+                    <p>
+                        Using an act-out task, we presented children with stative main clause sentences (e.g., "Tiger sat on the wagon that Sheep danced next to") and eventive main clause sentences (e.g., "Tiger danced next to the wagon that Sheep sat on"). Prior work found that, in an underspecified situation like this, adults tend to treat static states like sitting as the backdrop (i.e., the Ground) against which dynamic events like dancing (i.e., the Figure) unfold. Do children do the same thing?
+                    </p>
 
-    <p>
-Using an act-out task, we presented children with stative main clause sentences (e.g., "Tiger sat on the wagon that Sheep danced next to") and eventive main clause sentences (e.g., "Tiger danced next to the wagon that Sheep sat on"). Prior work found that, in an underspecified situation like this, adults tend to treat static states like sitting as the backdrop (i.e. the Ground) against which dynamic events like dancing (i.e., the Figure) unfold. Do children do the same thing?    </p>
+                    <p>
+                        Data collection is complete, and we are now coding the videos of children's enactments. Preliminary results suggest that kids do the same thing! Specifically, in their enactments, children were more likely to follow the linear order of a sentence when the main clause encoded a state and tended to reverse the order when the relative clause encoded a state. This suggests that children, like adults, use event dynamicity as a cue to infer temporal order.
+                    </p>
+                </div>
+            </div>
 
-    <p>
-While data collection is ongoing (one or two kids left!) preliminary results suggest that kids do the same thing! Specifically, in their enactments, children were more likely to follow the linear order of a sentence when the main clause encoded a state and tended to reverse the order when the relative clause encoded a state. This suggests that children, like adults, use event dynamicity as a cue to infer temporal order.    </p>
-  </div>
-</div>
-
-<p>
-    <strong style="color: #648FFF;">Through the Ai4CommSci Lab I am working on developing a transitive elicitation task that will be used to better understand word order in the Formosan Languages! This is very much in development and is collaborative work with Dr. Joshua Hartshorne and Dr. Jesse Snedeker.</strong>
-<p>
-  
-</div>
- 
- <hr style="border: none; height: 5px; background-image: repeating-linear-gradient(90deg, #DC267F, #DC267F 5px, transparent 5px, transparent 10px);">
-
-  <div
-
- class="contact">
-        <h2>Contact:</h2>
-        <p>Feel free to contact me: <a href="mailto:hshine@fas.harvard.edu">hshine[at]fas[dot]harvard[dot]edu</a> | slowly migrating things to: <a href="mailto:hanna-sophia_shine@brown.edu">hanna-sophia_shine[at]brown[dot]edu</a> </p>
+        </div>
     </div>
-   
+
+    <p>
+        <strong style="color: #648FFF;">Through the Ai4CommSci Lab I worked on developing a transitive elicitation task to better understand word order in the Formosan languages, in collaboration with Dr. Joshua Hartshorne and Dr. Jesse Snedeker.</strong>
+    </p>
+
+    <hr style="border: none; height: 5px; background-image: repeating-linear-gradient(90deg, #DC267F, #DC267F 5px, transparent 5px, transparent 10px);">
+
+    <div class="contact">
+        <h2>Contact:</h2>
+        <p>Feel free to contact me: <a href="mailto:hanna-sophia_shine@brown.edu">hanna-sophia_shine[at]brown[dot]edu</a></p>
+    </div>
+
     <div class="social-links">
         <h2>Other Places you can Find me:</h2>
         <p>
             <a href="https://twitter.com/hannashine14" target="_blank">Twitter</a>
             <a href="https://bsky.app/profile/hannashine.bsky.social" target="_blank">Bluesky</a>
+            <a href="https://scholar.google.com/citations?user=40alCWMAAAAJ&amp;hl=en" target="_blank">Google Scholar</a>
             <a href="https://github.com/hannasophiashine" target="_blank">GitHub</a>
             <a href="https://osf.io/mu6ef/" target="_blank">OSF</a>
         </p>
@@ -387,23 +422,20 @@ While data collection is ongoing (one or two kids left!) preliminary results sug
         <h2>More From Me:</h2>
         <p>
             <a href="https://hannasophiashine.github.io" target="_blank">Home Page</a>
-            <a href="https://hannasophiashine.github.io/H.Shine_CV_31926.pdf" target="_blank">View My CV</a> 
-            <a href="posters.html" target="_blank">Posters Presentations</a>
+            <a href="https://hannasophiashine.github.io/H.Shine_CV.pdf" target="_blank">View My CV</a>
+            <a href="posters.html" target="_blank">Poster Presentations</a>
             <a href="assorted-resources.html" target="_blank">Assorted Resources</a>
             <a href="https://www.goodreads.com/user/show/164634573-hanna" target="_blank">Other (non-academic-ish) Stuff</a>
         </p>
     </div>
 
-
-
     <footer>
-2025 Hanna-Sophia Shine | Powered by GitHub
+        2026 Hanna-Sophia Shine | Powered by GitHub
         <p>
-    <a href="https://davidmathlogic.com/colorblind/#%23648FFF-%23785EF0-%23DC267F-%23FE6100-%23FFB000" target="_blank">
-        Click here to find my color palette!
-    </a>
-</p>
+            <a href="https://davidmathlogic.com/colorblind/#%23648FFF-%23785EF0-%23DC267F-%23FE6100-%23FFB000" target="_blank">
+                Click here to find my color palette!
+            </a>
+        </p>
     </footer>
 </body>
-
 </html>
